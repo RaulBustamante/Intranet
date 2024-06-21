@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intranet - The Hub</title>
     <link rel="stylesheet" href="{{ asset('css/intranet.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="{{ asset('js/intranet.js') }}" defer></script>
 </head>
 <body>
@@ -21,13 +23,13 @@
         <section class="intro">
             <div class="orientation">
                 <h2>Quieres hablar con RH?</h2>
-                <p>Programa tu reunion</p>
+                <p>Programa tu reunión</p>
                 <button onclick="window.location.href='#'">Solicitar</button>
             </div>
             <div class="video">
                 <video controls>
-                    <source src="{{ asset('videos/example-video.mp4') }}" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.    
+                    <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
                 </video>
                 <p>Video del aniversario</p>
             </div>
@@ -38,31 +40,32 @@
                     <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Se acerca la semana de salud</a></li>
                     <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Se acerca el paseo de verano</a></li>
                 </ul>
-
             </div>
         </section>
 
         <section class="quick-links">
-            <a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1"><div class="icon">Soporte Tecnico</div></a>
+            <a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1"><div class="icon">Soporte Técnico</div></a>
             <a href="/calendar"><div class="icon">Calendario y Eventos</div></a>
             <a href="/humanResources"><div class="icon">Recursos Humanos</div></a>
             <a href="/document"><div class="icon">Documentos</div></a>
-            <a href="/gallery"><div class="icon">Galeria de Eventos</div></a>
+            <a href="/gallery"><div class="icon">Galería de Eventos</div></a>
+            <a href="https://masorden.com/"><div class="icon">Más Orden</div></a>
+            <a href="/boletines"><div class="icon">Boletines Mensuales</div></a>
             <a href="/birthdays"><div class="icon">Cumpleañeros</div></a>
-            <a href="https://masorden.com/"><div class="icon">Mas Orden</div></a>
             <a href="/directory"><div class="icon">Directorio</div></a>
+            <a href="/enlaces"><div class="icon">Enlaces</div></a>
+            <a href="/iso"><div class="icon">ISO</div></a>
             <a href="/aboutus"><div class="icon">Sobre Ariel</div></a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; 2024 contacto de Intranet: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>
-
-    <style>
-        body {
+<style>
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -168,6 +171,39 @@ main {
     text-decoration: underline;
 }
 
+.carousel {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.carousel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.swiper-container {
+    width: 30%; /* Ajuste el ancho del carrusel */
+    padding: 20px 0;
+    margin: 0 auto; /* Centrando el carrusel */
+}
+
+.swiper-slide {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.swiper-slide.swiper-slide-duplicate {
+    display: none;
+}
+
 .quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -201,9 +237,29 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
-    </style>
+
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Intranet page loaded');
+
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1, // Muestra solo una diapositiva a la vez
+        centeredSlides: true, // Centra la diapositiva
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
 });
+
 </script>

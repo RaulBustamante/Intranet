@@ -21,11 +21,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/calendar') }}">Calendario</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/document') }}">Documentos</a></li>
-            <li><a href="{{ url('/birthdays') }}">Cumpleañeros</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/calendar">Calendario y Eventos</a></li>
+            <li><a href="/document">Documentos</a></li>
+            <li><a href="/gallery">Galería de Eventos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/directory">Directorio</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
 
@@ -68,6 +74,18 @@
                     <li><a href="{{ url('/rh/programas-ejercicio') }}">Programas de ejercicio</a></li>
                     <li><a href="{{ url('/rh/charlas-nutricion') }}">Charlas de nutrición</a></li>
                     <li><a href="{{ url('/rh/asistencia-psicologica') }}">Asistencia psicológica</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="bienestar">
+            <div class="section-header">
+                <h2>Contabilidad</h2>
+            </div>
+            <div class="section-content">
+                <p>Todo lo referente a tus nominas.</p>
+                <ul>
+                    <li><a href="{{ asset('documents/HR/sodexo.pdf') }}">Preguntas frecuentes de Sodexo - Pluxie</a></li>
                 </ul>
             </div>
         </section>

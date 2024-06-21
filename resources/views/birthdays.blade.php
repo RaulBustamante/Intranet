@@ -20,9 +20,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/document') }}">Documentos</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/calendar">Calendario y Eventos</a></li>
+            <li><a href="/humanResources">Recursos Humanos</a></li>
+            <li><a href="/document">Documentos</a></li>
+            <li><a href="/gallery">Galería de Eventos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/directory">Directorio</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
 
@@ -62,7 +70,23 @@
             <!-- Junio -->
             <div class="month" onclick="toggleList('june')">Junio</div>
             <ul id="june" class="birthday-list">
-                <li>Luis Fernandez - Junio 14</li>
+                <li>Jesus Erasmo Santos - 5 - Produccion</li>
+                <li>Jesus Guadalupe Lopez - 6 - Produccion</li>
+                <li>Jazmin Dominguez - 6 - Produccion</li>
+                <li>Jazmin Diaz - 9 - Envios</li>
+                <li>Ana Cecilia Diaz - 10 - Produccion</li>
+                <li>Pablo Mandujano - 11 - Produccion</li>
+                <li>Laura Isabel Lopez - 13 - Arte</li>
+                <li>Maria Antonia Aguilar - 13 - Produccion</li>
+                <li>Irma Toledo - 18 - Produccion Ins</li>
+                <li>Jose Velazquez - 19 - Sistemas</li>
+                <li>Jesus Serrano - 20 - Produccion Ins</li>
+                <li>Guadalupe Rodriguez - 21 - Produccion</li>
+                <li>Yasbeck Cardenas - 21 - Arte</li>
+                <li>Juan Manuel Rosales - 22 - Produccion</li>
+                <li>Mayra Moran - 26 - Marketing</li>
+                <li>Hector Zapata - 30 - DS</li>
+                <li>Tomas Camacho - 30 - Produccion</li>
             </ul>
 
             <!-- Julio -->

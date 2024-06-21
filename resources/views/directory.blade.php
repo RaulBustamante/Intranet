@@ -19,9 +19,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/document') }}">Documentos</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/calendar">Calendario y Eventos</a></li>
+            <li><a href="/humanResources">Recursos Humanos</a></li>
+            <li><a href="/document">Documentos</a></li>
+            <li><a href="/gallery">Galería de Eventos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
 

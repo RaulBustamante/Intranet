@@ -20,10 +20,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/document') }}">Documentos</a></li>
-            <li><a href="{{ url('/birthdays') }}">Cumpleañeros</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/humanResources">Recursos Humanos</a></li>
+            <li><a href="/document">Documentos</a></li>
+            <li><a href="/gallery">Galería de Eventos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/directory">Directorio</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
 
@@ -36,20 +43,28 @@
                 @php
                     $holidays = [
                         '01-01' => ['Año Nuevo (USA, MX)', 'both'],
-                        '15-01' => ['Día de Martin Luther King Jr. (USA)', 'usa'],
+                        '05-02' => ['Día de la Constitución (MX)', 'mx'],
+                        '18-03' => ['Natalicio de Benito Juarez (MX)', 'mx'],
+                        '01-05' => ['Día del trabajo (MX)', 'mx'],
+                        '27-05' => ['Memorial Day (USA)', 'usa'],
+                        '04-07' => ['Independence Day (USA)', 'usa'],
+                        '02-09' => ['Labor Day (USA)', 'usa'],
                         '16-09' => ['Día de la Independencia (MX)', 'mx'],
                         '01-10' => ['Día de la Transmisión del Poder Ejecutivo Federal (MX)', 'mx'],
-                        '11-11' => ['Día de los Veteranos (USA)', 'usa'],
-                        '28-11' => ['Día de Acción de Gracias (USA)', 'usa'],
-                        '29-11' => ['Día de Acción de Gracias (USA)', 'usa'],
-                        '25-12' => ['Navidad (USA, MX)', 'both'],
-                        '05-02' => ['Día de la Constitución (MX)', 'mx'],
-                        '01-05' => ['Día del trabajo (MX)', 'mx'],
-                        '20-11' => ['Día de la Revolución Mexicana (MX)', 'mx']
+                        '11-11' => ['Veterans Day (USA)', 'usa'],
+                        '28-11' => ['Thanksgiving Day (USA)', 'usa'],
+                        '29-11' => ['Thanksgiving Day (USA)', 'usa'],
+                        '20-11' => ['Día de la Revolución Mexicana (MX)', 'mx'],
+                        '25-12' => ['Navidad (USA, MX)', 'both']
+                        
                     ];
                     $events = [
-                        '23-04' => ['Reunión Anual', 'event'],
-                        '15-08' => ['Fiesta de Verano', 'event'],
+                        '30-03' => ['Semana Santa', 'event'],
+                        '10-05' => ['Dia de las madres', 'event'],
+                        '23-06' => ['Dia del padre', 'event'],
+                        '15-08' => ['Paseo de Verano', 'event'],
+                        '31-10' => ['Concurso de Halloween', 'event'],
+                        '12-12' => ['Posada', 'event'],
                     ];
                     $months = [
                         'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
@@ -128,11 +143,12 @@
                     </ul>
                 </div>
                 <div class="legend">
-                    <h3>Leyenda</h3>
+                    <h3>Significado</h3>
                     <p><span class="legend-usa"></span> Festivos USA</p>
                     <p><span class="legend-mx"></span> Festivos MX</p>
                     <p><span class="legend-both"></span> Festivos USA y MX</p>
                     <p><span class="legend-event"></span> Eventos de la Compañía</p>
+                    <p><span class="legend-today"></span> Día Actual</p> <!-- Añadir explicación para el color del día actual -->
                 </div>
             </div>
         </section>
@@ -143,7 +159,8 @@
     </footer>
 </body>
 </html>
-    <style>
+
+<style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -347,6 +364,10 @@ header {
     border: 2px solid #f39c12;
 }
 
+.legend-today {
+    background-color: #e74c3c;
+}
+
 footer {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -355,6 +376,7 @@ footer {
 }
 
 </style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Calendar page loaded');
@@ -373,5 +395,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-    </script>
+</script>

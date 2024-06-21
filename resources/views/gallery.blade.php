@@ -18,12 +18,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/calendar') }}">Calendario</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/document') }}">Documentos</a></li>
-            <li><a href="{{ url('/birthdays') }}">Cumpleañeros</a></li>
-            <li><a href="{{ url('/aboutus') }}">Sobre Ariel</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/calendar">Calendario y Eventos</a></li>
+            <li><a href="/humanResources">Recursos Humanos</a></li>
+            <li><a href="/document">Documentos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/directory">Directorio</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
     <main class="container">
@@ -84,32 +89,35 @@ header {
 }
 
 .nav-bar {
-    background-color: #333;
-    color: #fff;
+    background-color: #34495e;
+    padding: 1rem;
     text-align: center;
-    padding: 10px 0;
 }
 
 .nav-bar ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
 .nav-bar ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 .nav-bar ul li a {
-    color: #fff;
+    color: #ecf0f1;
     text-decoration: none;
-    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .nav-bar ul li a:hover {
-    text-decoration: underline;
+    background-color: #e74c3c;
 }
 
 .container {

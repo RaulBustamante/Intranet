@@ -20,10 +20,17 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="{{ url('/calendar') }}">Calendario</a></li>
-            <li><a href="{{ url('/directory') }}">Directorio</a></li>
-            <li><a href="{{ url('/birthdays') }}">Cumpleañeros</a></li>
-            <li><a href="{{ url('/') }}">Cerrar Sesión</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="/calendar">Calendario y Eventos</a></li>
+            <li><a href="/humanResources">Recursos Humanos</a></li>
+            <li><a href="/gallery">Galería de Eventos</a></li>
+            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="/boletines">Boletines Mensuales</a></li>
+            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/directory">Directorio</a></li>
+            <li><a href="/enlaces">Enlaces</a></li>
+            <li><a href="/iso">ISO</a></li>
+            <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
 
@@ -31,29 +38,29 @@
         <section class="documents-section">
             <div class="documents-header">
                 <h2>Encuentra y descarga documentos aquí</h2>
-                <p>Los documentos están disponibles en formatos PDF, Excel y Word.</p>
+                <p>Los documentos están disponibles en formatos PDF</p>
             </div>
             <div class="documents-list">
                 <ul>
                     <li>
-                        <span>Solicitud de Permiso.pdf</span>
+                        <span>Formato de ausencia</span>
                         <div class="document-actions">
-                            <a href="path_to_document/Solicitud_de_Permiso.pdf" target="_blank" class="button">Leer</a>
-                            <a href="path_to_document/Solicitud_de_Permiso.pdf" download class="button">Descargar</a>
+                            <a href="{{ asset('documents/HR/incident.pdf') }}" target="_blank" class="button">Leer</a>
+                            <a href="{{ asset('documents/HR/incident.pdf') }}" download class="button">Descargar</a>
                         </div>
                     </li>
                     <li>
-                        <span>Reglamento Interno de Trabajo.pdf</span>
+                        <span>Reglamento Interno de Trabajo</span>
                         <div class="document-actions">
-                            <a href="path_to_document/Reglamento_Interno_de_Trabajo.pdf" target="_blank" class="button">Leer</a>
-                            <a href="path_to_document/Reglamento_Interno_de_Trabajo.pdf" download class="button">Descargar</a>
+                            <a href="{{ asset('documents/news2.pdf') }}" target="_blank" class="button">Leer</a>
+                            <a href="{{ asset('documents/news2.pdf') }}" download class="button">Descargar</a>
                         </div>
                     </li>
                     <li>
-                        <span>Manual del Empleado.pdf</span>
+                        <span>Manual del Empleado</span>
                         <div class="document-actions">
-                            <a href="path_to_document/Manual_del_Empleado.pdf" target="_blank" class="button">Leer</a>
-                            <a href="path_to_document/Manual_del_Empleado.pdf" download class="button">Descargar</a>
+                            <a href="{{ asset('documents/news3.pdf') }}" target="_blank" class="button">Leer</a>
+                            <a href="{{ asset('documents/news3.pdf') }}" download class="button">Descargar</a>
                         </div>
                     </li>
                     <!-- Agrega más documentos según sea necesario -->
