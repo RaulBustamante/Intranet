@@ -15,7 +15,7 @@
             <div class="logo">
                 <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
             </div>
-            <h1>Bienvenidos!</h1>
+            <h1>Bienvenidos todos!</h1>
         </div>
     </header>
 
