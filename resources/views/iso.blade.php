@@ -11,7 +11,9 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                </a>
             </div>
             <h1>ISO 9001:2015</h1>
         </div>
