@@ -13,7 +13,9 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                </a>
             </div>
             <h1>Bienvenidos todos!</h1>
         </div>
@@ -24,7 +26,7 @@
             <div class="orientation">
                 <h2>Quieres hablar con RH?</h2>
                 <p>Programa tu reunión</p>
-                <button onclick="window.location.href='https://wkf.ms/4bjg8Er'">Solicitar</button>
+                <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Solicitar</button>
             </div>
             <div class="video">
                 <video controls>
@@ -44,12 +46,16 @@
         </section>
 
         <section class="quick-links">
-            <a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1"><div class="icon">Soporte Técnico</div></a>
+            <a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1" target="_blank">
+                <div class="icon">Soporte Técnico</div>
+            </a>
             <a href="/calendar"><div class="icon">Calendario y Eventos</div></a>
             <a href="/humanResources"><div class="icon">Recursos Humanos</div></a>
             <a href="/document"><div class="icon">Documentos</div></a>
             <a href="/gallery"><div class="icon">Galería de Eventos</div></a>
-            <a href="https://masorden.com/"><div class="icon">Más Orden</div></a>
+            <a href="https://masorden.com/" target="_blank">
+                <div class="icon">Más Orden</div>
+            </a>
             <a href="/boletines"><div class="icon">Boletines Mensuales</div></a>
             <a href="/birthdays"><div class="icon">Cumpleañeros</div></a>
             <a href="/directory"><div class="icon">Directorio</div></a>

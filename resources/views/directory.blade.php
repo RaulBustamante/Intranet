@@ -10,7 +10,9 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
+                </a>
             </div>
             <h1>Directorio de Ariel</h1>
         </div>
@@ -19,12 +21,12 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1" target="_blank">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
-            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="https://masorden.com/" target="_blank">Más Orden</a></li>
             <li><a href="/boletines">Boletines Mensuales</a></li>
             <li><a href="/birthdays">Cumpleañeros</a></li>
             <li><a href="/enlaces">Enlaces</a></li>
