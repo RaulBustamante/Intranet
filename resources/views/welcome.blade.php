@@ -24,7 +24,7 @@
             <div class="orientation">
                 <h2>Quieres hablar con RH?</h2>
                 <p>Programa tu reunión</p>
-                <button onclick="window.location.href='#'">Solicitar</button>
+                <button onclick="window.location.href='https://wkf.ms/4bjg8Er'">Solicitar</button>
             </div>
             <div class="video">
                 <video controls>
