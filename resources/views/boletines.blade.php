@@ -37,10 +37,22 @@
         <section class="gallery">
             <h2>Boletines mensuales</h2>
             <div id="event-list" class="event-list">
-                <!-- Eventos serán insertados aquí por JavaScript -->
-            </div>
-            <div id="pagination" class="pagination">
-                <!-- Controles de paginación serán insertados aquí por JavaScript -->
+                <div class="event-item">
+                    <h3>Marzo 2024</h3>
+                    <p>Revive los mejores momentos del evento de verano.</p>
+                    <a href="{{ asset('documents/boletines/Comunicado.03.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
+                </div>
+                <div class="event-item">
+                    <h3>Abril 2024</h3>
+                    <p>Recuerdos de nuestra fiesta de Navidad del año pasado.</p>
+                    <a href="{{ asset('documents/boletines/Comunicado.04.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
+                </div>
+                <div class="event-item">
+                    <h3>Mayo 2024</h3>
+                    <p>Momentos destacados de la Semana de la Salud.</p>
+                    <a href="{{ asset('documents/boletines/Comunicado.05.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
+                </div>
+                <!-- Agregar más eventos según sea necesario -->
             </div>
         </section>
     </main>
@@ -216,71 +228,3 @@ footer {
     padding: 1rem 0;
 }
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('Galería de Eventos page loaded');
-
-    const events = [
-        { title: 'Marzo 2024', description: 'Revive los mejores momentos del evento de verano.', link: '{{ asset('documents/boletines/Comunicado.03.24.pdf') }}' },
-        { title: 'Abril 2024', description: 'Recuerdos de nuestra fiesta de Navidad del año pasado.', link: '{{ asset('documents/boletines/Comunicado.04.24.pdf') }}' },
-        { title: 'Mayo 2024', description: 'Momentos destacados de la Semana de la Salud.', link: '{{ asset('documents/boletines/Comunicado.05.24.pdf') }}' },
-        // Agregar más eventos según sea necesario
-    ];
-
-    const eventsPerPage = 6;
-    let currentPage = 1;
-
-    function displayEvents(page) {
-        const eventList = document.getElementById('event-list');
-        eventList.innerHTML = '';
-
-        const start = (page - 1) * eventsPerPage;
-        const end = start + eventsPerPage;
-        const paginatedEvents = events.slice(start, end);
-
-        paginatedEvents.forEach(event => {
-            const eventItem = document.createElement('div');
-            eventItem.className = 'event-item';
-            eventItem.innerHTML = `
-                <h3>${event.title}</h3>
-                <p>${event.description}</p>
-                <a href="${event.link}" target="_blank" class="button">Ver PDF</a>
-            `;
-            eventList.appendChild(eventItem);
-        });
-    }
-
-    function setupPagination() {
-        const pagination = document.getElementById('pagination');
-        pagination.innerHTML = '';
-
-        const pageCount = Math.ceil(events.length / eventsPerPage);
-
-        for (let i = 1; i <= pageCount; i++) {
-            const button = document.createElement('button');
-            button.innerText = i;
-            button.addEventListener('click', () => {
-                currentPage = i;
-                displayEvents(currentPage);
-                updatePagination();
-            });
-            pagination.appendChild(button);
-        }
-    }
-
-    function updatePagination() {
-        const buttons = document.querySelectorAll('.pagination button');
-        buttons.forEach((button, index) => {
-            if (index + 1 === currentPage) {
-                button.disabled = true;
-            } else {
-                button.disabled = false;
-            }
-        });
-    }
-
-    displayEvents(currentPage);
-    setupPagination();
-    updatePagination();
-});
-</script>
