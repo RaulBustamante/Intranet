@@ -45,20 +45,20 @@
                 <option value="all">Todos</option>
                 <option value="8825">8825</option>
                 <option value="1920">1920</option>
-                <option value="STL">STL</option>
-                <option value="TW">TW</option>
                 <option value="WC">WC</option>
+                <option value="TW">TW</option>                 
                 <option value="AZ">AZ</option>
                 <option value="CA">CA</option>
-                <option value="CN">CN</option>
-                <option value="PA">PA</option>
-                <option value="ME">ME</option>
-                <option value="IL">IL</option>
-                <option value="FL">FL</option>
                 <option value="CAN">CAN</option>
+                <option value="CN">CN</option>
                 <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="IL">IL</option>
+                <option value="ME">ME</option>
                 <option value="NJ">NJ</option>
                 <option value="OH">OH</option>
+                <option value="PA">PA</option>
+                <option value="STL">STL</option>
             </select>
         </section>
         <section class="table-container">
