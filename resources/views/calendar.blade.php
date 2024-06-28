@@ -280,12 +280,12 @@ header {
 }
 
 .calendar-table td.today {
-    background-color: #e74c3c;
+    background-color: #3498db;
     color: #fff;
 }
 
 .calendar-table td.usa {
-    background-color: #3498db;
+    background-color: #e74c3c;
     color: #fff;
 }
 
@@ -295,7 +295,7 @@ header {
 }
 
 .calendar-table td.both {
-    background: linear-gradient(45deg, #3498db 50%, #2ecc71 50%);
+    background: linear-gradient(45deg, #e74c3c 50%, #2ecc71 50%);
     color: #fff;
 }
 
@@ -351,7 +351,7 @@ header {
 }
 
 .legend-usa {
-    background-color: #3498db;
+    background-color: #e74c3c;
 }
 
 .legend-mx {
@@ -359,7 +359,7 @@ header {
 }
 
 .legend-both {
-    background: linear-gradient(45deg, #3498db 50%, #2ecc71 50%);
+    background: linear-gradient(45deg, #e74c3c 50%, #2ecc71 50%);
 }
 
 .legend-event {
@@ -367,7 +367,7 @@ header {
 }
 
 .legend-today {
-    background-color: #e74c3c;
+    background-color: #3498db;
 }
 
 footer {

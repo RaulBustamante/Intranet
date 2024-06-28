@@ -39,7 +39,7 @@
         <section class="quick-links">
             <a href="https://www.arielpremium.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/arielpremium.png') }}" alt="Ariel Premium">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="Ariel Premium">
                 </div>
                 <div class="quick-link-text">
                     <h3>Ariel Premium</h3>
@@ -48,7 +48,7 @@
             </a>
             <a href="http://191.168.0.138" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/ariel3.png') }}" alt="Ariel3">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="Ariel3">
                 </div>
                 <div class="quick-link-text">
                     <h3>Ariel3</h3>
@@ -57,7 +57,7 @@
             </a>
             <a href="https://chat.openai.com/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/meet.png') }}" alt="Chat GPT">
+                    <img src="{{ asset('img/chatgpt.jpg') }}" alt="Chat GPT">
                 </div>
                 <div class="quick-link-text">
                     <h3>Chat GPT</h3>
@@ -66,7 +66,7 @@
             </a>
             <a href="https://www.dropbox.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/dropbox.png') }}" alt="Dropbox">
+                    <img src="{{ asset('img/dropbox.jpg') }}" alt="Dropbox">
                 </div>
                 <div class="quick-link-text">
                     <h3>Dropbox</h3>
@@ -75,7 +75,7 @@
             </a>
             <a href="https://meet.google.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/meet.png') }}" alt="Google Meet">
+                    <img src="{{ asset('img/googlemeet.jpg') }}" alt="Google Meet">
                 </div>
                 <div class="quick-link-text">
                     <h3>Google Meet</h3>
@@ -84,7 +84,7 @@
             </a>
             <a href="https://www.languagetool.org" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/languagetool.png') }}" alt="Language Tool">
+                    <img src="{{ asset('img/languagetool.jpg') }}" alt="Language Tool">
                 </div>
                 <div class="quick-link-text">
                     <h3>Language Tool</h3>
@@ -93,7 +93,7 @@
             </a>
             <a href="http://masorden.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/metabase.png') }}" alt="Mas Orden">
+                    <img src="{{ asset('img/masorden.jpg') }}" alt="Mas Orden">
                 </div>
                 <div class="quick-link-text">
                     <h3>Mas Orden</h3>
@@ -102,7 +102,7 @@
             </a>
             <a href="http://192.168.1.228:3000" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/metabase.png') }}" alt="Metabase">
+                    <img src="{{ asset('img/metabase.jpg') }}" alt="Metabase">
                 </div>
                 <div class="quick-link-text">
                     <h3>Metabase</h3>
@@ -111,7 +111,7 @@
             </a>
             <a href="https://arielpremiumsupply.monday.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/monday.png') }}" alt="Monday">
+                    <img src="{{ asset('img/monday.jpg') }}" alt="Monday">
                 </div>
                 <div class="quick-link-text">
                     <h3>Monday</h3>
@@ -120,7 +120,7 @@
             </a>
             <a href="https://cloud.arielpremium.com/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/nextcloud.png') }}" alt="Nextcloud">
+                    <img src="{{ asset('img/nextcloud.jpg') }}" alt="Nextcloud">
                 </div>
                 <div class="quick-link-text">
                     <h3>Nextcloud</h3>
@@ -129,7 +129,7 @@
             </a>
             <a href="https://system.qualityweb360.com/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/meet.png') }}" alt="Qualityweb 360">
+                    <img src="{{ asset('img/qualityweb.jpg') }}" alt="Qualityweb 360">
                 </div>
                 <div class="quick-link-text">
                     <h3>Qualityweb 360</h3>
@@ -138,7 +138,7 @@
             </a>
             <a href="https://www.sodexo.es/pluxee/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/trello.png') }}" alt="Sodexo - Pluxee">
+                    <img src="{{ asset('img/pluxee.jpg') }}" alt="Sodexo - Pluxee">
                 </div>
                 <div class="quick-link-text">
                     <h3>Sodexo - Pluxee</h3>
@@ -147,7 +147,7 @@
             </a>
             <a href="https://www.trello.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/trello.png') }}" alt="Trello">
+                    <img src="{{ asset('img/trello.jpg') }}" alt="Trello">
                 </div>
                 <div class="quick-link-text">
                     <h3>Trello</h3>
@@ -156,7 +156,7 @@
             </a>
             <a href="https://login.tressrevolution.com/Revolution/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/meet.png') }}" alt="TRESS">
+                    <img src="{{ asset('img/tress.jpg') }}" alt="TRESS">
                 </div>
                 <div class="quick-link-text">
                     <h3>Tress Revolution</h3>
@@ -165,7 +165,7 @@
             </a>
             <a href="http://192.168.1.222" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/timetracking.png') }}" alt="West Coast Time Tracking">
+                    <img src="{{ asset('img/kimai.jpg') }}" alt="West Coast Time Tracking">
                 </div>
                 <div class="quick-link-text">
                     <h3>West Coast Time Tracking</h3>
@@ -174,7 +174,7 @@
             </a>
             <a href="https://www.zoom.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
-                    <img src="{{ asset('img/icons/zoom.png') }}" alt="Zoom">
+                    <img src="{{ asset('img/zoom.jpg') }}" alt="Zoom">
                 </div>
                 <div class="quick-link-text">
                     <h3>Zoom</h3>
