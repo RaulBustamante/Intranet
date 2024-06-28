@@ -26,7 +26,7 @@
             <li><a href="/document">Documentos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
             <li><a href="https://masorden.com/" target="_blank">Más Orden</a></li>
-            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/birthdays">Cumpleaños</a></li>
             <li><a href="/directory">Directorio</a></li>
             <li><a href="/enlaces">Enlaces</a></li>
             <li><a href="/iso">ISO</a></li>

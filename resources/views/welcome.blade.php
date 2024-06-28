@@ -24,13 +24,13 @@
     <main>
         <section class="intro">
             <div class="orientation">
-                <h2>¿Quieres hablar con RH?</h2>
-                <p>Programa tu reunión</p>
+                <h2>¿Necesitas asistencia de RH?</h2>
+                <p>Solicita tu consulta</p>
                 <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Solicitar</button>
                 <div class="suggestions">
                     <h2>Buzón de Sugerencias</h2>
                     <p>Déjanos tus comentarios y sugerencias</p>
-                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Solicitar</button>
+                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Enviar Sugerencia</button>
                 </div>
             </div>
             <div class="video">
@@ -50,7 +50,7 @@
                 <div class="referral-bonus">
                     <h2>Bono de Referidos</h2>
                     <p>Recomienda a un amigo y gana dinero</p>
-                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Solicitar</button>
+                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Recomienda y gana</button>
                 </div>
             </div>
         </section>
@@ -67,7 +67,7 @@
                 <div class="icon">Más Orden</div>
             </a>
             <a href="/boletines"><div class="icon">Boletines Mensuales</div></a>
-            <a href="/birthdays"><div class="icon">Cumpleañeros</div></a>
+            <a href="/birthdays"><div class="icon">Cumpleaños</div></a>
             <a href="/directory"><div class="icon">Directorio</div></a>
             <a href="/enlaces"><div class="icon">Enlaces</div></a>
             <a href="/iso"><div class="icon">ISO</div></a>

@@ -94,7 +94,23 @@
             <!-- Julio -->
             <div class="month" onclick="toggleList('july')">Julio</div>
             <ul id="july" class="birthday-list">
-                <li>Diego Sanchez - Julio 19</li>
+                <li>Ana Parra - Julio 3</li>
+                <li>Karina Valenzuela - Julio 5</li>
+                <li>Jose Partida - Julio 5</li>
+                <li>Ana Galindo - Julio 8</li>
+                <li>Alejandra Contreras - Julio 11</li>
+                <li>Jacquelyn Solano - Julio 11</li>
+                <li>Perla Vazquez - Julio 13</li>
+                <li>Kenia Suarez - Julio 13</li>
+                <li>Isela Ramirez - Julio 16</li>
+                <li>Enrique Sandoval - Julio 16</li>
+                <li>Dajan Paul Rodriguez - Julio 19</li>
+                <li>Diana Espinoza - Julio 20</li>
+                <li>Alejandro Merino - Julio 23</li>
+                <li>Laura Villalobos - Julio 23</li>
+                <li>Gerardo Avalos - Julio 29</li>
+                <li>Ricardo Mendoza - Julio 29</li>
+                <li>Martha Molina - Julio 29</li>
             </ul>
 
             <!-- Agosto -->
