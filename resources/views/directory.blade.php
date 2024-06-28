@@ -39,6 +39,28 @@
         <section class="banner">
             <h2>Acceso rápido a la información de contacto de los empleados</h2>
         </section>
+        <section class="filter-container">
+            <label for="location-filter">Filtrar por ubicación:</label>
+            <select id="location-filter">
+                <option value="all">Todos</option>
+                <option value="8825">8825</option>
+                <option value="1920">1920</option>
+                <option value="STL">STL</option>
+                <option value="TW">TW</option>
+                <option value="WC">WC</option>
+                <option value="AZ">AZ</option>
+                <option value="CA">CA</option>
+                <option value="CN">CN</option>
+                <option value="PA">PA</option>
+                <option value="ME">ME</option>
+                <option value="IL">IL</option>
+                <option value="FL">FL</option>
+                <option value="CAN">CAN</option>
+                <option value="DE">DE</option>
+                <option value="NJ">NJ</option>
+                <option value="OH">OH</option>
+            </select>
+        </section>
         <section class="table-container">
             <table>
                 <thead>
@@ -52,9 +74,19 @@
                         <th>Fax</th>
                         <th>E-mail</th>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
+                        <th><input type="text" id="search-department" placeholder="Buscar Departamento"></th>
+                        <th><input type="text" id="search-location" placeholder="Buscar Ubicación"></th>
+                        <th><input type="text" id="search-name" placeholder="Buscar Nombre"></th>
+                        <th><input type="text" id="search-surname" placeholder="Buscar Apellido"></th>
+                        <th><input type="text" id="search-extension" placeholder="Buscar Extensión"></th>
+                        <th><input type="text" id="search-phone" placeholder="Buscar Teléfono"></th>
+                        <th><input type="text" id="search-fax" placeholder="Buscar Fax"></th>
+                        <th><input type="text" id="search-email" placeholder="Buscar E-mail"></th>
+                    </tr>
+                </thead>
+                <tbody id="directory-table-body">
+                    <tr data-location="8825">
                         <td>Accounting</td>
                         <td>8825</td>
                         <td>Xiaoye</td>
@@ -64,7 +96,7 @@
                         <td>(314) 373-5861</td>
                         <td>xiaoyel@arielpremium.com</td>
                     </tr>
-                <tr>
+                    <tr data-location="STL">
                     <td>Accounting</td>
                     <td>STL</td>
                     <td>Maureen</td>
@@ -74,7 +106,7 @@
                     <td></td>
                     <td>maureend@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Manager-Art</td>
                     <td>8825</td>
                     <td>Jackie</td>
@@ -84,7 +116,7 @@
                     <td></td>
                     <td>jackied@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Art</td>
                     <td>TW</td>
                     <td>Brenda</td>
@@ -94,7 +126,7 @@
                     <td></td>
                     <td>brendac@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Art</td>
                     <td>TW</td>
                     <td>Chloe</td>
@@ -104,7 +136,7 @@
                     <td></td>
                     <td>chloec@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Art</td>
                     <td>8825</td>
                     <td>Kimberly</td>
@@ -114,7 +146,7 @@
                     <td></td>
                     <td>kimberlyo@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Art</td>
                     <td>8825</td>
                     <td>Jacenta</td>
@@ -124,7 +156,7 @@
                     <td></td>
                     <td>jacentaa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Art</td>
                     <td>8825</td>
                     <td>Jennifer</td>
@@ -134,7 +166,7 @@
                     <td></td>
                     <td>jenniferc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Art</td>
                     <td>8825</td>
                     <td>Jennifer</td>
@@ -144,7 +176,7 @@
                     <td></td>
                     <td>jennifern@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Sandra</td>
@@ -154,7 +186,7 @@
                     <td></td>
                     <td>SandraG@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Magally</td>
@@ -164,7 +196,7 @@
                     <td></td>
                     <td>magallya@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Reina</td>
@@ -174,7 +206,7 @@
                     <td></td>
                     <td>reinab@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Yasbeck</td>
@@ -184,7 +216,7 @@
                     <td></td>
                     <td>YasbeckC@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Laura</td>
@@ -194,7 +226,7 @@
                     <td></td>
                     <td>LauraL@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Art</td>
                     <td>WC</td>
                     <td>Jose</td>
@@ -204,7 +236,7 @@
                     <td></td>
                     <td>JoseC@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>PROD Art</td>
                     <td>WC</td>
                     <td>Juan</td>
@@ -214,7 +246,7 @@
                     <td></td>
                     <td>juanv@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>PROD Art</td>
                     <td>WC</td>
                     <td>Jose</td>
@@ -224,7 +256,7 @@
                     <td></td>
                     <td>josem@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Art</td>
                     <td>TW</td>
                     <td>Miles</td>
@@ -234,7 +266,7 @@
                     <td></td>
                     <td>milesl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Art</td>
                     <td>8825</td>
                     <td>Susan</td>
@@ -244,7 +276,7 @@
                     <td></td>
                     <td>susanm@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>BSU</td>
                     <td>8825</td>
                     <td>Brian</td>
@@ -254,7 +286,7 @@
                     <td></td>
                     <td>briananderson@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>BSU</td>
                     <td>8825</td>
                     <td>Carrie</td>
@@ -264,7 +296,7 @@
                     <td>(314) 373-5845</td>
                     <td>carriec@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>BSU</td>
                     <td>8825</td>
                     <td>Fiona</td>
@@ -274,7 +306,7 @@
                     <td></td>
                     <td>fionaq@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>BSU</td>
                     <td>WC</td>
                     <td>Joey</td>
@@ -284,7 +316,7 @@
                     <td></td>
                     <td>joeyv@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>BSU</td>
                     <td>8825</td>
                     <td>Joon</td>
@@ -294,7 +326,7 @@
                     <td></td>
                     <td>joonl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>BSU</td>
                     <td>8825</td>
                     <td>Michael</td>
@@ -304,7 +336,7 @@
                     <td></td>
                     <td>michaelt@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>BSU</td>
                     <td>WC</td>
                     <td>Raul</td>
@@ -314,7 +346,7 @@
                     <td></td>
                     <td>raulb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>BSU</td>
                     <td>TW</td>
                     <td>Rex</td>
@@ -324,7 +356,7 @@
                     <td></td>
                     <td>rexw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Credit</td>
                     <td>8825</td>
                     <td>Ling</td>
@@ -334,7 +366,7 @@
                     <td>(800) 806-1416</td>
                     <td>lingc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Credit</td>
                     <td>8825</td>
                     <td>Cindy</td>
@@ -344,7 +376,7 @@
                     <td>(866) 205-0435</td>
                     <td>cindyn@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Credit</td>
                     <td>TW</td>
                     <td>May</td>
@@ -354,7 +386,7 @@
                     <td></td>
                     <td>mayh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="AZ">
                     <td>Credit</td>
                     <td>AZ</td>
                     <td>Queena</td>
@@ -364,7 +396,7 @@
                     <td>(800)792-3578</td>
                     <td>queenac@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Credit</td>
                     <td>TW</td>
                     <td>Sharon</td>
@@ -374,7 +406,7 @@
                     <td></td>
                     <td>sharonh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Credit</td>
                     <td>8825</td>
                     <td>Sophie</td>
@@ -384,7 +416,7 @@
                     <td>(866) 760-0255</td>
                     <td>sophiem@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Distributor Service</td>
                     <td>8825</td>
                     <td>Tasha</td>
@@ -394,7 +426,7 @@
                     <td>(800) 806-1347</td>
                     <td>tashar@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-Lead</td>
                     <td>WC</td>
                     <td>Carmen</td>
@@ -404,7 +436,7 @@
                     <td></td>
                     <td>carmenj@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-Lead</td>
                     <td>WC</td>
                     <td>Hector</td>
@@ -424,7 +456,7 @@
                     <td>(888) 222-1395</td>
                     <td>asp1@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP1</td>
                     <td>WC</td>
                     <td>Angel</td>
@@ -434,7 +466,7 @@
                     <td></td>
                     <td>angelh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP1</td>
                     <td>WC</td>
                     <td>Vanessa</td>
@@ -454,7 +486,7 @@
                     <td>(866) 207-7248</td>
                     <td>asp2@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP2</td>
                     <td>8825</td>
                     <td>Linda</td>
@@ -464,7 +496,7 @@
                     <td></td>
                     <td>lindar@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP2</td>
                     <td>WC</td>
                     <td>Luis</td>
@@ -484,7 +516,7 @@
                     <td>(866) 207-2358</td>
                     <td>asp3@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP3</td>
                     <td>8825</td>
                     <td>Scott</td>
@@ -494,7 +526,7 @@
                     <td>(800) 806-0744</td>
                     <td>scottp@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP3</td>
                     <td>8825</td>
                     <td>Brandy</td>
@@ -504,7 +536,7 @@
                     <td>(800) 799-2634</td>
                     <td>brandyl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP3</td>
                     <td>WC</td>
                     <td>Stephany</td>
@@ -524,7 +556,7 @@
                     <td>(800) 798-0795</td>
                     <td>asp4@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP4</td>
                     <td>8825</td>
                     <td>Scott</td>
@@ -534,7 +566,7 @@
                     <td>(800) 806-0744</td>
                     <td>scottp@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP4</td>
                     <td>8825</td>
                     <td>Jean</td>
@@ -544,7 +576,7 @@
                     <td></td>
                     <td>jeanc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP4</td>
                     <td>WC</td>
                     <td>Miguel</td>
@@ -564,7 +596,7 @@
                     <td>(866) 760-0256</td>
                     <td>asp5@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP5</td>
                     <td>8825</td>
                     <td>Nancy</td>
@@ -574,7 +606,7 @@
                     <td></td>
                     <td>nancyc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP5</td>
                     <td>WC</td>
                     <td>Omar</td>
@@ -594,7 +626,7 @@
                     <td>(800) 792-3794</td>
                     <td>asp6@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP6</td>
                     <td>WC</td>
                     <td>Samantha</td>
@@ -604,7 +636,7 @@
                     <td></td>
                     <td>samanthat@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-ASP6</td>
                     <td>WC</td>
                     <td>Alejandrina</td>
@@ -614,7 +646,7 @@
                     <td></td>
                     <td>alejandrinaz@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP6</td>
                     <td>STL</td>
                     <td>Amber</td>
@@ -634,7 +666,7 @@
                     <td>(866) 760-0253</td>
                     <td>asp7@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP7</td>
                     <td>8825</td>
                     <td>Brandy</td>
@@ -644,7 +676,7 @@
                     <td>(800) 799-2634</td>
                     <td>brandyl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-ASP7</td>
                     <td>TW</td>
                     <td>Alex</td>
@@ -664,7 +696,7 @@
                     <td>(866) 207-5615</td>
                     <td>asp8@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP8</td>
                     <td>8825</td>
                     <td>Renee</td>
@@ -674,7 +706,7 @@
                     <td></td>
                     <td>reneeb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP8</td>
                     <td>8825</td>
                     <td>Sheena</td>
@@ -694,7 +726,7 @@
                     <td>(800) 792-3586</td>
                     <td>asp9@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CA">
                     <td>DS-ASP9</td>
                     <td>CA</td>
                     <td>Corrin</td>
@@ -704,7 +736,7 @@
                     <td></td>
                     <td>corrinf@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP9</td>
                     <td>8825</td>
                     <td>Missy</td>
@@ -724,7 +756,7 @@
                     <td>(800) 840-4398</td>
                     <td>asp10@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP10</td>
                     <td>8825</td>
                     <td>Linda</td>
@@ -734,7 +766,7 @@
                     <td></td>
                     <td>lindar@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP10</td>
                     <td>8825</td>
                     <td>Ashley</td>
@@ -754,7 +786,7 @@
                     <td>(800) 792-3584</td>
                     <td>asp11@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP11</td>
                     <td>8825</td>
                     <td>Sheena</td>
@@ -764,7 +796,7 @@
                     <td></td>
                     <td>sheenab@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-ASP11</td>
                     <td>TW</td>
                     <td>Deborah</td>
@@ -784,7 +816,7 @@
                     <td>(800) 806-1353</td>
                     <td>asp12@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-ASP12</td>
                     <td>8825</td>
                     <td>Angela</td>
@@ -794,7 +826,7 @@
                     <td></td>
                     <td>angelaa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CA">
                     <td>DS-ASP12</td>
                     <td>CA</td>
                     <td>Corrin</td>
@@ -804,7 +836,7 @@
                     <td></td>
                     <td>corrinf@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-ASP12</td>
                     <td>TW</td>
                     <td>Hoya</td>
@@ -824,7 +856,7 @@
                     <td>(866) 760-0248</td>
                     <td>canada@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-Canada</td>
                     <td>8825</td>
                     <td>Colleen</td>
@@ -834,7 +866,7 @@
                     <td>(866) 760-0250</td>
                     <td>colleenw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-Canada</td>
                     <td>8825</td>
                     <td>Brooke</td>
@@ -844,7 +876,7 @@
                     <td></td>
                     <td>brooker@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-Canada</td>
                     <td>TW</td>
                     <td>Kiki</td>
@@ -854,7 +886,7 @@
                     <td></td>
                     <td>kikil@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-Claims</td>
                     <td>8825</td>
                     <td>Becky</td>
@@ -864,7 +896,7 @@
                     <td></td>
                     <td>beckye@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>DS-Production Coordinator</td>
                     <td>1920</td>
                     <td>Leigh</td>
@@ -874,7 +906,7 @@
                     <td></td>
                     <td>leighg@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-Production Coordinator</td>
                     <td>8825</td>
                     <td>David</td>
@@ -884,7 +916,7 @@
                     <td></td>
                     <td>davidw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-Inventory Specialist</td>
                     <td>8825</td>
                     <td>Elizabeth</td>
@@ -894,7 +926,7 @@
                     <td>(866) 760-0249</td>
                     <td>elizabetht@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-CSR</td>
                     <td>WC</td>
                     <td>Luis</td>
@@ -904,7 +936,7 @@
                     <td></td>
                     <td>luisa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-CSR</td>
                     <td>WC</td>
                     <td>Sotero</td>
@@ -914,7 +946,7 @@
                     <td></td>
                     <td>soteroc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-CSR</td>
                     <td>WC</td>
                     <td>Edgar</td>
@@ -924,7 +956,7 @@
                     <td></td>
                     <td>edgarh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Hsuan</td>
@@ -934,7 +966,7 @@
                     <td></td>
                     <td>hsuanl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Irene</td>
@@ -944,7 +976,7 @@
                     <td></td>
                     <td>irenel@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>James</td>
@@ -954,7 +986,7 @@
                     <td></td>
                     <td>jamess@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Jennifer</td>
@@ -964,7 +996,7 @@
                     <td></td>
                     <td>jenniferl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Ling</td>
@@ -974,7 +1006,7 @@
                     <td></td>
                     <td>lingp@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Phoebe</td>
@@ -984,7 +1016,7 @@
                     <td></td>
                     <td>phoebet@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>DS-CSR</td>
                     <td>TW</td>
                     <td>Sunny</td>
@@ -994,7 +1026,7 @@
                     <td></td>
                     <td>sunnyyi@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CN">
                     <td>DS-OS</td>
                     <td>CN</td>
                     <td>Alphi</td>
@@ -1004,7 +1036,7 @@
                     <td></td>
                     <td>alphil@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>DS-OS</td>
                     <td>WC</td>
                     <td>Mayra</td>
@@ -1014,7 +1046,7 @@
                     <td></td>
                     <td>mayraa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS-OS</td>
                     <td>8825</td>
                     <td>Jessica</td>
@@ -1024,7 +1056,7 @@
                     <td>(800)792-3580</td>
                     <td>jessicab@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="NJ">
                     <td>DS-OS</td>
                     <td>NJ</td>
                     <td>Susan</td>
@@ -1034,7 +1066,7 @@
                     <td></td>
                     <td>susang@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS- Credit</td>
                     <td>8825</td>
                     <td>Zoey</td>
@@ -1044,7 +1076,7 @@
                     <td></td>
                     <td>zoeyl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>DS- Credit</td>
                     <td>8825</td>
                     <td>Cynthia</td>
@@ -1054,7 +1086,7 @@
                     <td></td>
                     <td>cynthiac@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>General Office</td>
                     <td>8825</td>
                     <td>May</td>
@@ -1084,7 +1116,7 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>General Office-Import/Export</td>
                     <td>WC</td>
                     <td>Angel</td>
@@ -1094,7 +1126,7 @@
                     <td></td>
                     <td>angelv@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>General Office-Import/Export</td>
                     <td>WC</td>
                     <td>Genaro</td>
@@ -1104,7 +1136,7 @@
                     <td></td>
                     <td>genaror@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>General Office-Purchasing</td>
                     <td>WC</td>
                     <td>Abigail</td>
@@ -1114,7 +1146,7 @@
                     <td></td>
                     <td>abigails@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Human Resources</td>
                     <td>8825</td>
                     <td>Kathryn</td>
@@ -1124,7 +1156,7 @@
                     <td></td>
                     <td>kathrynt@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>WC</td>
                     <td>Alejandra</td>
@@ -1134,7 +1166,7 @@
                     <td></td>
                     <td>alejandrac@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>HR</td>
                     <td>WC</td>
                     <td>Alfredo</td>
@@ -1144,7 +1176,7 @@
                     <td></td>
                     <td>alfredom@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Becky</td>
@@ -1154,7 +1186,7 @@
                     <td></td>
                     <td>beckys@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Lydia</td>
@@ -1164,7 +1196,7 @@
                     <td></td>
                     <td>lydias@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Jennifer</td>
@@ -1174,7 +1206,7 @@
                     <td></td>
                     <td>jennifert@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Li</td>
@@ -1184,7 +1216,7 @@
                     <td></td>
                     <td>lif@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Sophia</td>
@@ -1194,7 +1226,7 @@
                     <td></td>
                     <td>sophial@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>HR</td>
                     <td>8825</td>
                     <td>Tina</td>
@@ -1204,7 +1236,7 @@
                     <td></td>
                     <td>tinat@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager</td>
                     <td>8825</td>
                     <td>Kan</td>
@@ -1214,7 +1246,7 @@
                     <td>(866)205-1112</td>
                     <td>kanhsu@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager</td>
                     <td>8825</td>
                     <td>Tai</td>
@@ -1224,7 +1256,7 @@
                     <td></td>
                     <td>tai@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager</td>
                     <td>8825</td>
                     <td>Yuh-Ling</td>
@@ -1234,7 +1266,7 @@
                     <td>(866)205-6106</td>
                     <td>yuhling@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CN">
                     <td>Manager-China</td>
                     <td>CN</td>
                     <td>Liping</td>
@@ -1244,7 +1276,7 @@
                     <td></td>
                     <td>lipingz@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Manager-Taiwan</td>
                     <td>TW</td>
                     <td>Nancy</td>
@@ -1254,7 +1286,7 @@
                     <td></td>
                     <td>nancyw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Manager-West Coast</td>
                     <td>WC</td>
                     <td>Jorge</td>
@@ -1264,7 +1296,7 @@
                     <td></td>
                     <td>jorger@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Marketing</td>
                     <td>8825</td>
                     <td>Caitlin</td>
@@ -1274,7 +1306,7 @@
                     <td></td>
                     <td>caitlind@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Adam</td>
@@ -1284,7 +1316,7 @@
                     <td></td>
                     <td>adamb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Marketing</td>
                     <td>WC</td>
                     <td>Guadalupe</td>
@@ -1294,7 +1326,7 @@
                     <td></td>
                     <td>guadalupeh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Marketing</td>
                     <td>WC</td>
                     <td>Patricia</td>
@@ -1304,7 +1336,7 @@
                     <td></td>
                     <td>patriciaa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Marketing</td>
                     <td>WC</td>
                     <td>Liha</td>
@@ -1314,7 +1346,7 @@
                     <td></td>
                     <td>liham@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Marketing</td>
                     <td>WC</td>
                     <td>Mayra</td>
@@ -1324,7 +1356,7 @@
                     <td></td>
                     <td>mayram@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Marketing</td>
                     <td>WC</td>
                     <td>Pricilla</td>
@@ -1334,7 +1366,7 @@
                     <td></td>
                     <td>pricillac@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Lichun</td>
@@ -1344,7 +1376,7 @@
                     <td></td>
                     <td>lichunm@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Jay</td>
@@ -1354,7 +1386,7 @@
                     <td></td>
                     <td>jaychi@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Joan</td>
@@ -1364,7 +1396,7 @@
                     <td></td>
                     <td>joanm@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Kate</td>
@@ -1374,7 +1406,7 @@
                     <td></td>
                     <td>katel@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Sara</td>
@@ -1384,7 +1416,7 @@
                     <td></td>
                     <td>sarat@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Marketing</td>
                     <td>8825</td>
                     <td>Xinya</td>
@@ -1394,7 +1426,7 @@
                     <td></td>
                     <td>xinyah@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Production</td>
                     <td>8825</td>
                     <td>HongYu</td>
@@ -1404,7 +1436,7 @@
                     <td></td>
                     <td>hongyuz@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>8825 Digital Print</td>
@@ -1424,7 +1456,7 @@
                     <td></td>
                     <td>prodlabel@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>8825 Packaging</td>
@@ -1434,7 +1466,7 @@
                     <td></td>
                     <td>packaging8825@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>8825 Unpack</td>
@@ -1444,7 +1476,7 @@
                     <td></td>
                     <td>unpack8825@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>Daniel</td>
@@ -1454,7 +1486,7 @@
                     <td></td>
                     <td>prodmaint@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>Meimei</td>
@@ -1464,7 +1496,7 @@
                     <td></td>
                     <td>imprint@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>Michael</td>
@@ -1474,7 +1506,7 @@
                     <td></td>
                     <td>michaelw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>Nicole</td>
@@ -1484,7 +1516,7 @@
                     <td></td>
                     <td>nicolez@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Production</td>
                     <td>8825</td>
                     <td>Paula</td>
@@ -1494,7 +1526,7 @@
                     <td></td>
                     <td>paular@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Belinda</td>
@@ -1504,7 +1536,7 @@
                     <td></td>
                     <td>belindaw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Screen</td>
@@ -1514,7 +1546,7 @@
                     <td></td>
                     <td>production1920@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Henry</td>
@@ -1524,7 +1556,7 @@
                     <td></td>
                     <td>henryc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>1920 Production</td>
@@ -1534,7 +1566,7 @@
                     <td></td>
                     <td>jingw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Sam</td>
@@ -1544,7 +1576,7 @@
                     <td></td>
                     <td>digitalprint1920@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Yihua</td>
@@ -1554,7 +1586,7 @@
                     <td></td>
                     <td>yihuaj@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Production</td>
                     <td>1920</td>
                     <td>Jing</td>
@@ -1564,7 +1596,7 @@
                     <td></td>
                     <td>jingw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production</td>
                     <td>WC</td>
                     <td>West Coast</td>
@@ -1574,7 +1606,7 @@
                     <td></td>
                     <td>maintenancewc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production</td>
                     <td>WC</td>
                     <td>Norberto</td>
@@ -1584,7 +1616,7 @@
                     <td></td>
                     <td>norbertoa@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production</td>
                     <td>WC</td>
                     <td>Karen</td>
@@ -1594,7 +1626,7 @@
                     <td></td>
                     <td>karenm@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Producton QC</td>
                     <td>WC</td>
                     <td>Janette</td>
@@ -1604,7 +1636,7 @@
                     <td></td>
                     <td>janettes@arielpremim.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production-Laser Plate Room</td>
                     <td>WC</td>
                     <td>LaserPlate</td>
@@ -1614,7 +1646,7 @@
                     <td></td>
                     <td>LaserPlateWC@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production-Digital Print</td>
                     <td>WC</td>
                     <td>BottleJet</td>
@@ -1624,7 +1656,7 @@
                     <td></td>
                     <td>digitalprintwc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Production-Digital Print</td>
                     <td>WC</td>
                     <td>Screen</td>
@@ -1634,7 +1666,7 @@
                     <td></td>
                     <td>digitalprintwc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Producton-Embroidery</td>
                     <td>WC</td>
                     <td>Embroidery</td>
@@ -1644,7 +1676,7 @@
                     <td></td>
                     <td>embroiderywc@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Products</td>
                     <td>8825</td>
                     <td>Sharon</td>
@@ -1654,7 +1686,7 @@
                     <td>(800)801-1018</td>
                     <td>sharonl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Baozhen</td>
@@ -1664,7 +1696,7 @@
                     <td></td>
                     <td>baozhenm@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Products</td>
                     <td>TW</td>
                     <td>Emily</td>
@@ -1674,7 +1706,7 @@
                     <td></td>
                     <td>emilyw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Erin</td>
@@ -1684,7 +1716,7 @@
                     <td></td>
                     <td>erinw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CN">
                     <td>Products</td>
                     <td>CN</td>
                     <td>Joe</td>
@@ -1694,7 +1726,7 @@
                     <td></td>
                     <td>joeh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Li</td>
@@ -1704,7 +1736,7 @@
                     <td></td>
                     <td>lip@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>May</td>
@@ -1714,7 +1746,7 @@
                     <td></td>
                     <td>maylee@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CN">
                     <td>Products</td>
                     <td>CN</td>
                     <td>Michael</td>
@@ -1724,7 +1756,7 @@
                     <td></td>
                     <td>michaely@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Niki</td>
@@ -1734,7 +1766,7 @@
                     <td></td>
                     <td>nikiw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="TW">
                     <td>Products</td>
                     <td>TW</td>
                     <td>Olivia</td>
@@ -1744,7 +1776,7 @@
                     <td></td>
                     <td>olivial@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Products</td>
                     <td>WC</td>
                     <td>Rafael</td>
@@ -1754,7 +1786,7 @@
                     <td></td>
                     <td>rafaels@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Shengmei</td>
@@ -1764,7 +1796,7 @@
                     <td></td>
                     <td>shengmeic@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Products</td>
                     <td>8825</td>
                     <td>Zongying</td>
@@ -1784,7 +1816,7 @@
                     <td></td>
                     <td>rudyw@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="PA">
                     <td>Manager-Sales</td>
                     <td>PA</td>
                     <td>Rich</td>
@@ -1794,7 +1826,7 @@
                     <td>(267) 614-1391</td>
                     <td>richh@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Sales</td>
                     <td>8825</td>
                     <td>Amy</td>
@@ -1804,7 +1836,7 @@
                     <td>(314) 707-4644</td>
                     <td>amyk@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="PA">
                     <td>Sales</td>
                     <td>PA</td>
                     <td>Brendan</td>
@@ -1814,7 +1846,7 @@
                     <td>(215) 936-9774</td>
                     <td>brendanp@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="OH">
                     <td>Sales</td>
                     <td>OH</td>
                     <td>Dan</td>
@@ -1824,7 +1856,7 @@
                     <td>(614) 284-5013</td>
                     <td>dan@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="ME">
                     <td>Sales</td>
                     <td>ME</td>
                     <td>Darrell</td>
@@ -1834,7 +1866,7 @@
                     <td>(617) 780-5884</td>
                     <td>darrellf@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="IL">
                     <td>Sales</td>
                     <td>IL</td>
                     <td>Jeff</td>
@@ -1844,7 +1876,7 @@
                     <td>(630) 258-6853</td>
                     <td>jeffr@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CA">
                     <td>Sales</td>
                     <td>CA</td>
                     <td>Larry</td>
@@ -1854,7 +1886,7 @@
                     <td>(951) 505-1813</td>
                     <td>larryb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CA">
                     <td>Sales</td>
                     <td>CA</td>
                     <td>Laura</td>
@@ -1864,7 +1896,7 @@
                     <td>(510) 289-9979</td>
                     <td>laurab@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CA">
                     <td>Sales</td>
                     <td>CA</td>
                     <td>Lindsey</td>
@@ -1874,7 +1906,7 @@
                     <td>(415) 902-8956</td>
                     <td>lindseyg@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="FL">
                     <td>Sales</td>
                     <td>FL</td>
                     <td>Martin</td>
@@ -1884,7 +1916,7 @@
                     <td>(407) 580-8816</td>
                     <td>martyg@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="CAN">
                     <td>Sales</td>
                     <td>CAN</td>
                     <td>Neil</td>
@@ -1894,7 +1926,7 @@
                     <td>(905) 761-7023</td>
                     <td>neil@prg.ca</td>
                 </tr>
-                <tr>
+                <tr data-location="DE">
                     <td>Sales</td>
                     <td>DE</td>
                     <td>Tony</td>
@@ -1904,7 +1936,7 @@
                     <td>(732) 241-9638</td>
                     <td>tonyl@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Manager-Shipping/Warehouse</td>
                     <td>8825</td>
                     <td>Bill</td>
@@ -1914,7 +1946,7 @@
                     <td></td>
                     <td>williamb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Shipping-Supervisor</td>
                     <td>8825</td>
                     <td>Ross</td>
@@ -1924,7 +1956,7 @@
                     <td></td>
                     <td>rossn@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Shipping-Samples</td>
                     <td>8825</td>
                     <td>David</td>
@@ -1934,7 +1966,7 @@
                     <td></td>
                     <td>davidn@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Shipping</td>
                     <td>1920</td>
                     <td>1920</td>
@@ -1944,7 +1976,7 @@
                     <td></td>
                     <td>shipping@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Shipping D</td>
                     <td>WC</td>
                     <td>West Coast</td>
@@ -1954,7 +1986,7 @@
                     <td></td>
                     <td>shipping@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Shipping E</td>
                     <td>WC</td>
                     <td>West Coast</td>
@@ -1964,7 +1996,7 @@
                     <td></td>
                     <td>shippingwce@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Warehouse-Supervisor</td>
                     <td>8825</td>
                     <td>Jake</td>
@@ -1974,7 +2006,7 @@
                     <td></td>
                     <td>jakek@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Warehouse</td>
                     <td>8825</td>
                     <td>8825 Warehouse</td>
@@ -1984,7 +2016,7 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Warehouse</td>
                     <td>8825</td>
                     <td>8825 Warehouse</td>
@@ -1994,7 +2026,7 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr data-location="8825">
                     <td>Warehouse</td>
                     <td>8825</td>
                     <td>Chris</td>
@@ -2004,7 +2036,7 @@
                     <td></td>
                     <td>chrisb@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="1920">
                     <td>Warehouse</td>
                     <td>1920</td>
                     <td>1920 Warehouse</td>
@@ -2014,7 +2046,7 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Warehouse</td>
                     <td>WC</td>
                     <td>Marco</td>
@@ -2024,7 +2056,7 @@
                     <td></td>
                     <td>marcol@arielpremium.com</td>
                 </tr>
-                <tr>
+                <tr data-location="WC">
                     <td>Warehouse</td>
                     <td>WC</td>
                     <td>Jose Luis</td>
@@ -2043,11 +2075,12 @@
     <footer>
         <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
+    <script src="{{ asset('js/intranet.js') }}" defer></script>
 </body>
 </html>
 <style>
-    body {
-    font-family: Arial, sans-serif;
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
@@ -2131,6 +2164,9 @@ header {
     padding: 0 1rem;
     height: 80vh; /* Adjust as needed */
     overflow-y: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
@@ -2141,18 +2177,31 @@ table {
 th, td {
     border: 1px solid #ddd;
     text-align: left;
-    padding: 8px;
+    padding: 12px;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
+th input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+}
+
 tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
 }
 
 footer {
@@ -2161,9 +2210,95 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+.filter-container {
+    margin: 1rem;
+    text-align: center;
+}
+
+.filter-container label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.filter-container select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.filter-container select:focus {
+    border-color: #2c3e50;
+    outline: none;
+}
+
+.filter-container select option {
+    padding: 0.5rem;
+}
+
+.filter-container select:hover {
+    cursor: pointer;
+}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Directory page loaded');
+    const locationFilter = document.getElementById('location-filter');
+    const tableBody = document.getElementById('directory-table-body');
+
+    locationFilter.addEventListener('change', function () {
+        const selectedLocation = this.value;
+        filterTableByLocation(selectedLocation);
+    });
+
+    function filterTableByLocation(location) {
+        const rows = tableBody.getElementsByTagName('tr');
+        for (let row of rows) {
+            const rowLocation = row.getAttribute('data-location');
+            if (location === 'all' || rowLocation === location) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    }
+
+    const inputs = document.querySelectorAll('thead input');
+    inputs.forEach(input => {
+        input.addEventListener('keyup', function () {
+            const column = this.id.split('-')[1];
+            const value = this.value.toLowerCase();
+            filterTableByColumn(column, value);
+        });
+    });
+
+    function filterTableByColumn(column, value) {
+        const rows = tableBody.getElementsByTagName('tr');
+        for (let row of rows) {
+            const cell = row.querySelector(`td:nth-child(${getColumnIndex(column)})`);
+            if (cell) {
+                if (cell.textContent.toLowerCase().includes(value)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+    }
+
+    function getColumnIndex(column) {
+        switch (column) {
+            case 'department': return 1;
+            case 'location': return 2;
+            case 'name': return 3;
+            case 'surname': return 4;
+            case 'extension': return 5;
+            case 'phone': return 6;
+            case 'fax': return 7;
+            case 'email': return 8;
+            default: return 1;
+        }
+    }
 });
-</script>
+</script>   
