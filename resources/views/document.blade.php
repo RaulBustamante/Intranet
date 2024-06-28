@@ -47,8 +47,8 @@
                     <li>
                         <span>Formato de ausencia</span>
                         <div class="document-actions">
-                            <a href="{{ asset('documents/HR/incident.pdf') }}" target="_blank" class="button">Leer</a>
-                            <a href="{{ asset('documents/HR/incident.pdf') }}" download class="button">Descargar</a>
+                            <a href="{{ asset('documents/hr/incident.pdf') }}" target="_blank" class="button">Leer</a>
+                            <a href="{{ asset('documents/hr/incident.pdf') }}" download class="button">Descargar</a>
                         </div>
                     </li>
                     <li>

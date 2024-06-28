@@ -87,7 +87,7 @@
             <div class="section-content">
                 <p>Todo lo referente a tus nominas.</p>
                 <ul>
-                    <li><a href="{{ asset('documents/HR/sodexo.pdf') }}">Preguntas frecuentes de Sodexo - Pluxie</a></li>
+                    <li><a href="{{ asset('documents/hr/sodexo.pdf') }}">Preguntas frecuentes de Sodexo - Pluxie</a></li>
                 </ul>
             </div>
         </section>
