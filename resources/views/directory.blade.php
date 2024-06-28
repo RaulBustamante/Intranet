@@ -28,7 +28,7 @@
             <li><a href="/gallery">Galería de Eventos</a></li>
             <li><a href="https://masorden.com/" target="_blank">Más Orden</a></li>
             <li><a href="/boletines">Boletines Mensuales</a></li>
-            <li><a href="/birthdays">Cumpleañeros</a></li>
+            <li><a href="/birthdays">Cumpleaños</a></li>
             <li><a href="/enlaces">Enlaces</a></li>
             <li><a href="/iso">ISO</a></li>
             <li><a href="/aboutus">Sobre Ariel</a></li>
