@@ -34,11 +34,13 @@
         </ul>
     </nav>
     <main class="container">
-        <section class="mission-values">
-            <div class="mission">
-                <h2>Nuestra Misión</h2>
-                <p>Proporcionar una experiencia <strong>EXCEPCIONAL</strong> para nuestros Asociados, Clientes, y Proveedores.</p>
+        <section class="intro">
+            <div class="intro-content">
+                <h2>Bienvenidos a Ariel</h2>
+                <p>En Ariel, nuestra misión es proporcionar una experiencia <strong>EXCEPCIONAL</strong> para nuestros Asociados, Clientes, y Proveedores.</p>
             </div>
+        </section>
+        <section class="mission-values">
             <div class="values">
                 <h2>Nuestros Valores</h2>
                 <div class="values-content">
@@ -52,7 +54,7 @@
                     </div>
                     <div class="value-item">
                         <h3>Crecimiento</h3>
-                        <p>Compromiso con el crecimiento y la mejora por que aceptamos el cambio y bienvenidos oportunidades de aprender y liderar.</p>
+                        <p>Compromiso con el crecimiento y la mejora porque aceptamos el cambio y bienvenidos oportunidades de aprender y liderar.</p>
                     </div>
                     <div class="value-item">
                         <h3>Comunicación</h3>
@@ -60,7 +62,7 @@
                     </div>
                     <div class="value-item">
                         <h3>Trabajo en Equipo</h3>
-                        <p>Abrazar una diversidad de ideas, personas y sus talentos para Lograr Nuestro objetivos de la empresa.</p>
+                        <p>Abrazar una diversidad de ideas, personas y sus talentos para lograr nuestros objetivos de la empresa.</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +82,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     color: #333;
 }
 
@@ -88,7 +90,6 @@ header {
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 1rem 0;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +113,8 @@ header {
 
 .header-content h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .nav-bar {
@@ -127,7 +129,7 @@ header {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-bar ul li {
@@ -153,27 +155,46 @@ header {
     padding: 0 1rem;
 }
 
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
 .mission-values {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     background-color: #ecf0f1;
     padding: 2rem;
     border-radius: 8px;
 }
 
-.mission, .values {
-    flex: 1;
+.mission img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-.mission h2, .values h2 {
-    font-size: 1.8rem;
+.values {
+    width: 100%;
+}
+
+.values h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-.mission p {
-    font-size: 1.2rem;
+    color: #2c3e50;
+    text-align: center;
 }
 
 .values-content {
@@ -188,39 +209,54 @@ header {
     border-radius: 8px;
     padding: 1rem;
     flex: 1 1 calc(50% - 1rem);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .value-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-top: 0;
+    color: #2c3e50;
 }
 
 .value-item p {
     font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
 }
 
 .presentation {
     margin-top: 2rem;
     text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .presentation h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #2c3e50;
 }
 
 .presentation .button {
-    background-color: #3498db;
+    background-color: #e74c3c;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     text-decoration: none;
+    font-size: 1rem;
     transition: background-color 0.3s ease-in-out;
 }
 
 .presentation .button:hover {
-    background-color: #2980b9;
+    background-color: #c0392b;
 }
 
 footer {
@@ -228,6 +264,15 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 1rem 0;
+}
+
+footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 </style>
