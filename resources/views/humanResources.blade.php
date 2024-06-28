@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos Humanos - ORIGAMI Intranet</title>
+    <title>Recursos Humanos</title>
     <link rel="stylesheet" href="{{ asset('css/intranet.css') }}">
     <script src="{{ asset('js/intranet.js') }}" defer></script>
 </head>
@@ -59,8 +59,8 @@
             <div class="section-content">
                 <p>Accede a recursos de formación y aprende más sobre oportunidades de desarrollo profesional.</p>
                 <ul>
-                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Cursos en línea</a></li>
-                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Talleres presenciales</a></li>
+                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Vacantes disponibles</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
                     <li><a href="{{ url('/rh/programas-mentoria') }}">Programas de mentoría</a></li>
                 </ul>
             </div>

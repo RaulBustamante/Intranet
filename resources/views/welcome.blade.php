@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ariel - Intranet</title>
+    <title>Ariel - Hub</title>
     <link rel="stylesheet" href="{{ asset('css/intranet.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
@@ -17,21 +17,26 @@
                     <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
                 </a>
             </div>
-            <h1>Ariel Intranet</h1>
+            <h1>Ariel Hub</h1>
         </div>
     </header>
 
     <main>
         <section class="intro">
             <div class="orientation">
-                <h2>Quieres hablar con RH?</h2>
+                <h2>¿Quieres hablar con RH?</h2>
                 <p>Programa tu reunión</p>
                 <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Solicitar</button>
+                <div class="suggestions">
+                    <h2>Buzón de Sugerencias</h2>
+                    <p>Déjanos tus comentarios y sugerencias</p>
+                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Solicitar</button>
+                </div>
             </div>
             <div class="video">
                 <video controls>
                     <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
-                        Tu navegador no soporta la etiqueta de video.
+                    Tu navegador no soporta la etiqueta de video.
                 </video>
                 <p>Video del aniversario</p>
             </div>
@@ -42,6 +47,11 @@
                     <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Se acerca la semana de salud</a></li>
                     <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Se acerca el paseo de verano</a></li>
                 </ul>
+                <div class="referral-bonus">
+                    <h2>Bono de Referidos</h2>
+                    <p>Recomienda a un amigo y gana dinero</p>
+                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Solicitar</button>
+                </div>
             </div>
         </section>
 
@@ -141,6 +151,10 @@ main {
     margin-top: 1rem;
 }
 
+.suggestions {
+    margin-top: 2rem;
+}
+
 .video {
     flex: 2;
     text-align: center;
@@ -177,37 +191,17 @@ main {
     text-decoration: underline;
 }
 
-.carousel {
+.referral-bonus {
     margin-top: 2rem;
-    text-align: center;
 }
 
-.carousel h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.swiper-container {
-    width: 30%; /* Ajuste el ancho del carrusel */
-    padding: 20px 0;
-    margin: 0 auto; /* Centrando el carrusel */
-}
-
-.swiper-slide {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.swiper-slide.swiper-slide-duplicate {
-    display: none;
+.referral-bonus button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .quick-links {
@@ -243,7 +237,6 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
-
 </style>
 
 <script>
@@ -267,5 +260,4 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 });
-
 </script>
