@@ -17,7 +17,7 @@
                     <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
                 </a>
             </div>
-            <h1>Bienvenidos todos!</h1>
+            <h1>Ariel Intranet</h1>
         </div>
     </header>
 
