@@ -55,6 +55,15 @@
                     <p>Aplicación de Ariel.</p>
                 </div>
             </a>
+            <a href="http://191.168.0.65/index.php/Main_Page" target="_blank" class="quick-link-card">
+                <div class="quick-link-icon">
+                    <img src="{{ asset('img/company-logo.png') }}" alt="ArielWiki">
+                </div>
+                <div class="quick-link-text">
+                    <h3>Ariel Wiki</h3>
+                    <p>Aplicacion de Ariel de Conocimiento General.</p>
+                </div>
+            </a>
             <a href="https://chat.openai.com/" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
                     <img src="{{ asset('img/chatgpt.jpg') }}" alt="Chat GPT">
@@ -71,6 +80,15 @@
                 <div class="quick-link-text">
                     <h3>Dropbox</h3>
                     <p>Almacenamiento.</p>
+                </div>
+            </a>
+            <a href="https://goblin.tools/" target="_blank" class="quick-link-card">
+                <div class="quick-link-icon">
+                    <img src="{{ asset('img/goblintools.jpg') }}" alt="Goblin Tools">
+                </div>
+                <div class="quick-link-text">
+                    <h3>Goblin Tools</h3>
+                    <p>Administrador gratuito de tareas.</p>
                 </div>
             </a>
             <a href="https://meet.google.com" target="_blank" class="quick-link-card">
@@ -91,6 +109,7 @@
                     <p>Herramienta para traducción.</p>
                 </div>
             </a>
+
             <a href="http://masorden.com" target="_blank" class="quick-link-card">
                 <div class="quick-link-icon">
                     <img src="{{ asset('img/masorden.jpg') }}" alt="Mas Orden">
