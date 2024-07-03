@@ -45,7 +45,7 @@
                 <ul>
                     <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Así vivieron los padres su festejo</a></li>
                     <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Se acerca la semana de salud</a></li>
-                    <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Se acerca el paseo de verano</a></li>
+                    <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">ya se tiene fecha para el paseo de verano</a></li>
                 </ul>
                 <div class="referral-bonus">
                     <h2>Bono de Referidos</h2>
