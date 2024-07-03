@@ -71,6 +71,7 @@
             <a href="/directory"><div class="icon">Directorio</div></a>
             <a href="/enlaces"><div class="icon">Enlaces</div></a>
             <a href="/iso"><div class="icon">ISO</div></a>
+            <a href="/reservationsummary"><div class="icon">Salas de juntas</div></a>
             <a href="/aboutus"><div class="icon">Sobre Ariel</div></a>
         </section>
     </main>
