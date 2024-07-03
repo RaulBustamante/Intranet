@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Reservaciones - ORIGAMI Intranet</title>
+    <title>Apartado de salas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
@@ -88,17 +88,54 @@
         .fc-event {
             font-size: 0.9rem;
             padding: 5px;
+            white-space: normal !important;
+        }
+        .fc-event-title {
+            white-space: normal !important; /* Para que el texto haga wrap */
         }
         .fc-daygrid-event-dot {
             border-radius: 50%;
             width: 10px;
             height: 10px;
         }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+        }
         footer {
             background-color: #2c3e50;
             color: #ecf0f1;
             text-align: center;
             padding: 1rem 0;
+        }
+        .tooltip {
+            position: absolute;
+            z-index: 1070;
+            display: block;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 0.15s;
+            padding: 0.25rem 0.5rem;
+            color: #fff;
+            background-color: #000;
+            border-radius: 0.25rem;
+        }
+        .tooltip.show {
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -110,7 +147,7 @@
                     <img src="{{ asset('img/company-logo.png') }}" alt="Company Logo">
                 </a>
             </div>
-            <h1>Resumen de Reservaciones de Salas</h1>
+            <h1>Disponibilidad de Salas de junta</h1>
         </div>
     </header>
 
@@ -130,22 +167,15 @@
             <li><a href="/aboutus">Sobre Ariel</a></li>
         </ul>
     </nav>
+    <br>
+    <div class="legend">
+        <div><span style="background-color: #1E90FF;"></span> Sala de juntas grande</div>
+        <div><span style="background-color: #32CD32;"></span> Sala de juntas chica</div>
+        <div><span style="background-color: #FF8C00;"></span> Sala de entrenamiento</div>
+    </div>
 
     <main class="container">
-        <div class="form-group">
-            <label for="roomFilter">Filtrar por Sala</label>
-            <select class="form-control" id="roomFilter">
-                <option value="all">Todas las Salas</option>
-                @foreach($rooms as $room)
-                    <option value="{{ $room->id }}">{{ $room->name }}</option>
-                @endforeach
-            </select>
-            <button id="applyFilter" class="btn btn-primary">Aplicar</button>
-        </div>
-        </div>
         <div id="calendar"></div>
-    </div>
-    </div>
         <a href="{{ url('/reservations') }}" class="btn btn-success mt-3">Nueva Reservación</a>
     </main>
 
@@ -160,31 +190,28 @@
                 initialView: 'dayGridMonth',
                 locale: 'es',
                 events: @json($events),
-                editable: false,
-                droppable: false,
-                eventRender: function(info) {
-                    var tooltip = new Tooltip(info.el, {
-                        title: info.event.title,
-                        placement: 'top',
-                        trigger: 'hover',
-                        container: 'body'
-                    });
+                editable: true,
+                droppable: true,
+                eventMouseEnter: function(info) {
+                    var tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    tooltip.innerHTML = info.event.title;
+                    document.body.appendChild(tooltip);
+                    tooltip.style.left = (info.jsEvent.pageX + 10) + 'px';
+                    tooltip.style.top = (info.jsEvent.pageY + 10) + 'px';
+                    tooltip.classList.add('show');
+                    info.el.setAttribute('data-tooltip-id', tooltip.id);
+                },
+                eventMouseLeave: function(info) {
+                    var tooltip = document.querySelector('.tooltip');
+                    if (tooltip) {
+                        tooltip.classList.remove('show');
+                        tooltip.remove();
+                    }
                 }
             });
 
             calendar.render();
-
-            document.getElementById('applyFilter').addEventListener('click', function() {
-                var roomId = document.getElementById('roomFilter').value;
-                calendar.getEventSources().forEach(source => source.remove());
-                calendar.addEventSource({
-                    events: function(fetchInfo, successCallback, failureCallback) {
-                        fetch('/api/reservations?room_id=' + roomId)
-                            .then(response => response.json())
-                            .then(data => successCallback(data));
-                    }
-                });
-            });
         });
     </script>
 </body>

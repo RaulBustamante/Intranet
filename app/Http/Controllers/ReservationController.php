@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\MeetingRoom;
 use App\Models\Reservation;
+use Illuminate\Support\Facades\Log;
 
 class ReservationController extends Controller
 {
@@ -16,6 +17,8 @@ class ReservationController extends Controller
 
     public function store(Request $request)
     {
+        Log::info('Store request received:', $request->all());
+
         $request->validate([
             'room_id' => 'required|integer',
             'start_time' => 'required|date',
@@ -36,10 +39,11 @@ class ReservationController extends Controller
             ->first();
 
         if ($existingReservation) {
+            Log::info('Existing reservation found:', $existingReservation->toArray());
             return redirect()->back()->with('error', 'Ya existe una reserva para esta sala en el horario seleccionado.');
         }
 
-        Reservation::create([
+        $reservation = Reservation::create([
             'room_id' => $request->room_id,
             'start_time' => $request->start_time,
             'end_time' => $request->end_time,
@@ -47,6 +51,8 @@ class ReservationController extends Controller
             'meeting_title' => $request->meeting_title,
             'status' => 'pendiente',
         ]);
+
+        Log::info('Reservation created:', $reservation->toArray());
 
         return redirect()->route('reservations.index')->with('success', 'Reservación creada exitosamente.');
     }
@@ -79,3 +85,4 @@ class ReservationController extends Controller
         return $colors[$roomId] ?? '#378006';
     }
 }
+
