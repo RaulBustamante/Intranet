@@ -54,6 +54,19 @@
 
         <section id="capacitacion">
             <div class="section-header">
+                <h2>Reclutamiento</h2>
+            </div>
+            <div class="section-content">
+                <p>Accede a recursos de formación y aprende más sobre oportunidades de desarrollo profesional.</p>
+                <ul>
+                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Vacantes disponibles</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="capacitacion">
+            <div class="section-header">
                 <h2>Capacitación y Desarrollo</h2>
             </div>
             <div class="section-content">
