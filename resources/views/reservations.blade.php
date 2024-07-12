@@ -156,7 +156,7 @@
             </div>
         @endif
         <div class="back-button">
-            <a href="{{ route('reservations.summary') }}" class="btn btn-secondary">Volver al Calenario</a>
+            <a href="{{ route('reservations.summary') }}" class="btn btn-secondary">Volver al Calendario</a>
         </div>
     </div>
 
