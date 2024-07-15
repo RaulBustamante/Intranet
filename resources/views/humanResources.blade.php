@@ -59,11 +59,11 @@
             <div class="section-content">
                 <p>Accede a recursos de formación y aprende más sobre oportunidades de desarrollo profesional.</p>
                 <ul>
-                    <li><a href="{{ url('https://www.empleonuevo.com/empleo-en/veteran-promotions') }}">Vacantes en Empleo Nuevo</a></li>
-                    <li><a href="{{ url('https://www.glassdoor.com.mx/Jobs/Ariel-Premium-Supply-INC-Jobs-E233691.htm?filter.countryId=1') }}">Vacantes en Glassdoor</a></li>
-                    <li><a href="{{ url('https://www.google.com/search?q=empleo%20ariel%20premium#ip=1') }}">Vacantes en Google</a></li>                    
-                    <li><a href="{{ url('https://mx.indeed.com/cmp/Ariel-Premium-Supply/jobs') }}">Vacantes en Indeed</a></li>
-                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
+                    <li><a href="https://www.empleonuevo.com/empleo-en/veteran-promotions" target="_blank">Vacantes en Empleo Nuevo</a></li>
+                    <li><a href="https://www.glassdoor.com.mx/Jobs/Ariel-Premium-Supply-INC-Jobs-E233691.htm?filter.countryId=1" target="_blank">Vacantes en Glassdoor</a></li>
+                    <li><a href="https://www.google.com/search?q=empleo%20ariel%20premium#ip=1" target="_blank">Vacantes en Google</a></li>
+                    <li><a href="https://mx.indeed.com/cmp/Ariel-Premium-Supply/jobs" target="_blank">Vacantes en Indeed</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}" target="_blank">Programa de Referidos</a></li>
                 </ul>
             </div>
         </section>
