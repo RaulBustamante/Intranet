@@ -1599,6 +1599,26 @@
                 <tr data-location="WC">
                     <td>Production</td>
                     <td>WC</td>
+                    <td>Ottmar</td>
+                    <td>Angulo</td>
+                    <td>3511</td>
+                    <td></td>
+                    <td></td>
+                    <td>ottmara@arielpremium.com</td>
+                </tr>
+                <tr data-location="WC">
+                    <td>Production</td>
+                    <td>WC</td>
+                    <td>Isela</td>
+                    <td>Ramirez</td>
+                    <td>3519</td>
+                    <td></td>
+                    <td></td>
+                    <td>iselar@arielpremium.com</td>
+                </tr>
+                <tr data-location="WC">
+                    <td>Production</td>
+                    <td>WC</td>
                     <td>West Coast</td>
                     <td>Maintenance</td>
                     <td>3537</td>
