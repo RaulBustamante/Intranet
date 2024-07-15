@@ -43,11 +43,11 @@
                 <h2>Beneficios</h2>
             </div>
             <div class="section-content">
-                <p>Información detallada sobre los planes de salud, seguros, y otros beneficios.</p>
+                <p>Información detallada sobre</p>
                 <ul>
-                    <li><a href="{{ url('/rh/plan-salud') }}">Plan de Salud</a></li>
-                    <li><a href="{{ url('/rh/seguros-vida') }}">Seguros de Vida</a></li>
-                    <li><a href="{{ url('/rh/bonos-desempeno') }}">Bonos de Desempeño</a></li>
+                    <li><a href="{{ url('/rh/plan-salud') }}">1</a></li>
+                    <li><a href="{{ url('/rh/seguros-vida') }}">2</a></li>
+                    <li><a href="{{ url('/rh/bonos-desempeno') }}">3</a></li>
                 </ul>
             </div>
         </section>
@@ -63,7 +63,7 @@
                     <li><a href="https://www.glassdoor.com.mx/Jobs/Ariel-Premium-Supply-INC-Jobs-E233691.htm?filter.countryId=1" target="_blank">Vacantes en Glassdoor</a></li>
                     <li><a href="https://www.google.com/search?q=empleo%20ariel%20premium#ip=1" target="_blank">Vacantes en Google</a></li>
                     <li><a href="https://mx.indeed.com/cmp/Ariel-Premium-Supply/jobs" target="_blank">Vacantes en Indeed</a></li>
-                    <li><a href="{{ url('/rh/talleres-presenciales') }}" target="_blank">Programa de Referidos</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}" target="_blank">P</a></li>
                 </ul>
             </div>
         </section>
@@ -75,9 +75,9 @@
             <div class="section-content">
                 <p>Accede a recursos de formación y aprende más sobre oportunidades de desarrollo profesional.</p>
                 <ul>
-                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Vacantes disponibles</a></li>
-                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
-                    <li><a href="{{ url('/rh/programas-mentoria') }}">Programas de mentoría</a></li>
+                    <li><a href="{{ url('/rh/cursos-en-linea') }}">1</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}">2</a></li>
+                    <li><a href="{{ url('/rh/programas-mentoria') }}">3</a></li>
                 </ul>
             </div>
         </section>
@@ -89,9 +89,9 @@
             <div class="section-content">
                 <p>Explora programas y recursos para mantener un estilo de vida saludable.</p>
                 <ul>
-                    <li><a href="{{ url('/rh/programas-ejercicio') }}">Programas de ejercicio</a></li>
-                    <li><a href="{{ url('/rh/charlas-nutricion') }}">Charlas de nutrición</a></li>
-                    <li><a href="{{ url('/rh/asistencia-psicologica') }}">Asistencia psicológica</a></li>
+                    <li><a href="{{ url('/rh/programas-ejercicio') }}">1</a></li>
+                    <li><a href="{{ url('/rh/charlas-nutricion') }}">2</a></li>
+                    <li><a href="{{ url('/rh/asistencia-psicologica') }}">3</a></li>
                 </ul>
             </div>
         </section>

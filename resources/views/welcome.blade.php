@@ -48,9 +48,9 @@
                     <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">ya se tiene fecha para el paseo de verano</a></li>
                 </ul>
                 <div class="referral-bonus">
-                    <h2>Bono de Referidos</h2>
-                    <p>Recomienda a un amigo y gana dinero</p>
-                    <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Recomienda y gana</button>
+                    <h2>Ref</h2>
+                    <p>Rec</p>
+                    <button onclick="window.open('', '_blank')">a</button>
                 </div>
             </div>
         </section>
