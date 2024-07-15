@@ -30,7 +30,7 @@
                 <div class="suggestions">
                     <h2>Buzón de Sugerencias</h2>
                     <p>Déjanos tus comentarios y sugerencias</p>
-                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Enviar Sugerencia</button>
+                    <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Enviar Sugerencia</button>
                 </div>
             </div>
             <div class="video">
@@ -50,7 +50,7 @@
                 <div class="referral-bonus">
                     <h2>Bono de Referidos</h2>
                     <p>Recomienda a un amigo y gana dinero</p>
-                    <button onclick="window.open('https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1', '_blank')">Recomienda y gana</button>
+                    <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Recomienda y gana</button>
                 </div>
             </div>
         </section>
