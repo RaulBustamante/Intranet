@@ -59,7 +59,10 @@
             <div class="section-content">
                 <p>Accede a recursos de formación y aprende más sobre oportunidades de desarrollo profesional.</p>
                 <ul>
-                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Vacantes disponibles</a></li>
+                    <li><a href="{{ url('https://www.empleonuevo.com/empleo-en/veteran-promotions') }}">Vacantes en Empleo Nuevo</a></li>
+                    <li><a href="{{ url('https://www.glassdoor.com.mx/Jobs/Ariel-Premium-Supply-INC-Jobs-E233691.htm?filter.countryId=1') }}">Vacantes en Glassdoor</a></li>
+                    <li><a href="{{ url('https://www.google.com/search?q=empleo%20ariel%20premium#ip=1') }}">Vacantes en Google</a></li>                    
+                    <li><a href="{{ url('https://mx.indeed.com/cmp/Ariel-Premium-Supply/jobs') }}">Vacantes en Indeed</a></li>
                     <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
                 </ul>
             </div>
