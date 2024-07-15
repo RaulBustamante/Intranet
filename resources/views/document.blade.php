@@ -52,14 +52,14 @@
                         </div>
                     </li>
                     <li>
-                        <span>Reglamento Interno de Trabajo</span>
+                        <span>Reg</span>
                         <div class="document-actions">
                             <a href="{{ asset('documents/news2.pdf') }}" target="_blank" class="button">Leer</a>
                             <a href="{{ asset('documents/news2.pdf') }}" download class="button">Descargar</a>
                         </div>
                     </li>
                     <li>
-                        <span>Manual del Empleado</span>
+                        <span>Man</span>
                         <div class="document-actions">
                             <a href="{{ asset('documents/news3.pdf') }}" target="_blank" class="button">Leer</a>
                             <a href="{{ asset('documents/news3.pdf') }}" download class="button">Descargar</a>
