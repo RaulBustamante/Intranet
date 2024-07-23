@@ -39,18 +39,23 @@
             <div id="event-list" class="event-list">
                 <div class="event-item">
                     <h3>Marzo 2024</h3>
-                    <p>Revive los mejores momentos del evento de verano.</p>
+                    <p>Comunicados Organizacionales de Marzo.</p>
                     <a href="{{ asset('documents/boletines/comunicado.03.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
                 </div>
                 <div class="event-item">
                     <h3>Abril 2024</h3>
-                    <p>Recuerdos de nuestra fiesta de Navidad del año pasado.</p>
+                    <p>Comunicados Organizacionales de Abril.</p>
                     <a href="{{ asset('documents/boletines/comunicado.04.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
                 </div>
                 <div class="event-item">
                     <h3>Mayo 2024</h3>
-                    <p>Momentos destacados de la Semana de la Salud.</p>
+                    <p>Comunicados Organizacionales de Mayo.</p>
                     <a href="{{ asset('documents/boletines/comunicado.05.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
+                </div>
+                <div class="event-item">
+                    <h3>Junio 2024</h3>
+                    <p>Comunicados Organizacionalesw de Junio.</p>
+                    <a href="{{ asset('documents/boletines/comunicado.06.24.pdf') }}" target="_blank" class="button">Ver PDF</a>
                 </div>
                 <!-- Agregar más eventos según sea necesario -->
             </div>
