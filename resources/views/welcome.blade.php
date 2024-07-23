@@ -43,14 +43,14 @@
             <div class="news">
                 <h2>Últimas Noticias</h2>
                 <ul>
-                    <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Así vivieron los padres su festejo</a></li>
-                    <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Se acerca la semana de salud</a></li>
-                    <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">ya se tiene fecha para el paseo de verano</a></li>
+                    <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Paseo de verano 2024: Invitacion</a></li>
+                    <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">ya se tiene fecha para el paseo de verano</a></li>
+                    <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Festejo del dia del padre</a></li>
                 </ul>
                 <div class="referral-bonus">
-                    <h2>Ref</h2>
-                    <p>Rec</p>
-                    <button onclick="window.open('', '_blank')">a</button>
+                    <h2>Referidos</h2>
+                    <p>Quieres recomendar a alguien?</p>
+                    <button onclick="window.open('', '_blank')">recomendar</button>
                 </div>
             </div>
         </section>
