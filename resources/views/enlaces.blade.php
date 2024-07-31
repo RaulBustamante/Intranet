@@ -64,6 +64,15 @@
                 </div>
             </a>
         </a>
+        <a href="http://191.168.50.33/" target="_blank" class="quick-link-card">
+            <div class="quick-link-icon">
+                <img src="{{ asset('img/company-logo.png') }}" alt="ArielDash">
+            </div>
+            <div class="quick-link-text">
+                <h3>Ariel Dashboards</h3>
+                <p>Tableros de Resultados en tiempo real de Ariel.</p>
+            </div>
+        </a>
         <a href="http://191.168.0.65/index.php/Main_Page" target="_blank" class="quick-link-card">
             <div class="quick-link-icon">
                 <img src="{{ asset('img/company-logo.png') }}" alt="ArielWiki">
