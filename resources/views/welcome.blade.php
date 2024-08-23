@@ -43,8 +43,8 @@
             <div class="news">
                 <h2>Últimas Noticias</h2>
                 <ul>
-                    <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Paseo de verano 2024: Invitacion</a></li>
-                    <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">ya se tiene fecha para el paseo de verano</a></li>
+                    <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Croqueton 2024</a></li>
+                    <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Paseo de verano 2024: Invitacion</a></li>
                     <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Festejo del dia del padre</a></li>
                 </ul>
                 <div class="referral-bonus">
