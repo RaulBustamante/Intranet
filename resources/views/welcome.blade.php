@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="video">
-                <video controls>
+                <video controls controlsList="nodownload">
                     <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
@@ -44,14 +44,9 @@
                 <h2>Últimas Noticias</h2>
                 <ul>
                     <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Croqueton 2024</a></li>
-                    <li><a href="{{ asset('videos/2024ArielsSummerOlympics.mp4') }}" target="_blank">Ariel Olympics 2024</a></li>
-                    <li><a href="{{ asset('videos/SummerFunDay.mp4') }}" target="_blank">Summer Fun Day 2024</a></li>
+                    <li><a href="{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'videos/2024ArielsSummerOlympics.mp4']) }}" target="_blank">Ariel Olympics 2024</a></li>
+                    <li><a href="{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'videos/SummerFunDay.mp4']) }}" target="_blank">Summer Fun Day 2024</a></li>
                 </ul>
-                <div class="referral-bonus">
-                    <h2>Referidos</h2>
-                    <p>Quieres recomendar a alguien?</p>
-                    <button onclick="window.open('', '_blank')">recomendar</button>
-                </div>
             </div>
         </section>
 
@@ -81,6 +76,7 @@
     </footer>
 </body>
 </html>
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -243,6 +239,14 @@ footer {
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Intranet page loaded');
+
+    // Prevent right-click on video to make downloading harder
+    document.addEventListener('contextmenu', function (event) {
+        var target = event.target;
+        if (target.tagName === 'VIDEO') {
+            event.preventDefault();
+        }
+    });
 
     const swiper = new Swiper('.swiper-container', {
         loop: true,

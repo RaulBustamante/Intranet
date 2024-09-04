@@ -44,4 +44,10 @@ Route::get('/db-check', function () {
     }
 });
 
+Route::get('/video', function (Illuminate\Http\Request $request) {
+    $videoTitle = $request->input('title');
+    $videoPath = $request->input('path');
+    return view('video', ['videoTitle' => $videoTitle, 'videoPath' => $videoPath]);
+})->name('video');
+
 
