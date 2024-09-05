@@ -223,8 +223,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Galería de Eventos page loaded');
 
     const events = [
-        { title: 'Ariel Olympics 2024', description: 'Revive los momentos más emocionantes de nuestras Olimpiadas de la Compañía 2024, donde el espíritu de equipo, la diversión y la competencia se unieron para crear recuerdos inolvidables.', link: "{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'videos/2024ArielsSummerOlympics.mp4']) }}", type: 'video' },
-        { title: 'Summer Fun Day 2024', description: 'Revive los mejores momentos del evento de verano 2024, un día lleno de sol, música y buena compañía que nos dejó recuerdos para toda la vida.', link: "{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'videos/SummerFunDay.mp4']) }}", type: 'video' },
+        { title: 'Ariel Olympics 2024', description: 'Revive los momentos más emocionantes de nuestras Olimpiadas de la Compañía 2024, donde el espíritu de equipo, la diversión y la competencia se unieron para crear recuerdos inolvidables.', link: "{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/2024+Ariel\'s+Olympics.mp4']) }}", type: 'video' },
+        { title: 'Summer Fun Day 2024', description: 'Revive los mejores momentos del evento de verano 2024, un día lleno de sol, música y buena compañía que nos dejó recuerdos para toda la vida.', link: "{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/20240818+Summer+Fun+Day.mp4']) }}", type: 'video' },
         { title: 'Evento de Verano 2023', description: 'Revive los mejores momentos del evento de verano.', link: 'path_to_document/evento_verano_2023.pdf', type: 'document' },
         { title: 'Fiesta de Navidad 2022', description: 'Recuerdos de nuestra fiesta de Navidad del año pasado.', link: 'path_to_document/fiesta_navidad_2022.pdf', type: 'document' },
         { title: 'Semana de la Salud 2022', description: 'Momentos destacados de la Semana de la Salud.', link: 'path_to_document/semana_salud_2022.pdf', type: 'document' },

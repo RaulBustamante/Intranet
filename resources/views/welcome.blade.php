@@ -44,8 +44,12 @@
                 <h2>Últimas Noticias</h2>
                 <ul>
                     <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Croqueton 2024</a></li>
-                    <li><a href="{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'videos/2024ArielsSummerOlympics.mp4']) }}" target="_blank">Ariel Olympics 2024</a></li>
-                    <li><a href="{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'videos/SummerFunDay.mp4']) }}" target="_blank">Summer Fun Day 2024</a></li>
+                    <li>
+                        <a href="{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/2024+Ariel\'s+Olympics.mp4']) }}" target="_blank">Ariel Olympics 2024</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/20240818+Summer+Fun+Day.mp4']) }}" target="_blank">Summer Fun Day 2024</a>
+                    </li>
                 </ul>
             </div>
         </section>
