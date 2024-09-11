@@ -14,6 +14,12 @@
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
+# En tu archivo .htaccess o httpd.conf
+    php_value upload_max_filesize 800M
+    php_value post_max_size 800M
+    php_value memory_limit 1024M
+
+
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f

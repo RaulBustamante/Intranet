@@ -35,19 +35,29 @@ Route::get('/reservations', [ReservationController::class, 'index'])->name('rese
 Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
 Route::get('/reservationsummary', [ReservationController::class, 'summary'])->name('reservations.summary');
 
-Route::get('/db-check', function () {
-    try {
-        DB::connection()->getPdo();
-        return 'Conexión a la base de datos exitosa';
-    } catch (\Exception $e) {
-        return 'No se pudo conectar a la base de datos. Error: ' . $e->getMessage();
-    }
-});
-
 Route::get('/video', function (Illuminate\Http\Request $request) {
     $videoTitle = $request->input('title');
     $videoPath = $request->input('path');
     return view('video', ['videoTitle' => $videoTitle, 'videoPath' => $videoPath]);
 })->name('video');
+
+
+use App\Http\Controllers\VideoController;
+
+Route::get('/gallery', [VideoController::class, 'showGallery'])->name('gallery');
+Route::get('/boletines', [VideoController::class, 'showBoletines'])->name('boletines');
+Route::get('/document', [VideoController::class, 'showDocumentos'])->name('document');
+Route::post('/upload-galeria', [VideoController::class, 'uploadGaleria'])->name('upload.galeria');
+Route::post('/upload-boletines', [VideoController::class, 'uploadBoletines'])->name('upload.boletines');
+Route::post('/upload-documentos', [VideoController::class, 'uploadDocumentos'])->name('upload.documentos');
+
+// Ruta para mostrar la página de reproducción de video
+Route::get('/video', [VideoController::class, 'showVideo'])->name('video');
+
+// Ruta para mostrar el formulario de subida de archivos
+Route::get('/upload-video', [VideoController::class, 'showUploadForm'])->name('upload.form');
+
+
+
 
 
