@@ -17,7 +17,7 @@ use App\Http\Controllers\VideoController;
 |
 */
 
-Route::get('/', function () { return view('welcome');});
+Route::get('/', function () { return view('welcome');})->name('welcome');
 Route::get('/calendar', function () { return view('calendar');});
 Route::get('/header', function () { return view('header');});
 Route::get('/sidebar', function () { return view('sidebar');});
@@ -40,21 +40,21 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rutas protegidas por el middleware simpleauth
 Route::middleware('simpleauth')->group(function () {
+    
     Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
     Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
-    Route::get('/reservationsummary', [ReservationController::class, 'summary'])->name('reservations.summary');
-
     // Ruta para mostrar el formulario de subida de archivos
     Route::get('/upload-video', [VideoController::class, 'showUploadForm'])->name('upload.form');
 
 });
+
+Route::get('/reservationsummary', [ReservationController::class, 'summary'])->name('reservations.summary');
 
 Route::get('/video', function (Illuminate\Http\Request $request) {
     $videoTitle = $request->input('title');
     $videoPath = $request->input('path');
     return view('video', ['videoTitle' => $videoTitle, 'videoPath' => $videoPath]);
 })->name('video');
-
 
 Route::get('/gallery', [VideoController::class, 'showGallery'])->name('gallery');
 Route::get('/boletines', [VideoController::class, 'showBoletines'])->name('boletines');
