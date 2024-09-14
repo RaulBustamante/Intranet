@@ -64,9 +64,9 @@
                         '30-03' => ['Semana Santa', 'event'],
                         '10-05' => ['Dia de las madres', 'event'],
                         '23-06' => ['Dia del padre', 'event'],
-                        '15-08' => ['Paseo de Verano', 'event'],
-                        '31-10' => ['Concurso de Halloween', 'event'],
-                        '12-12' => ['Posada', 'event'],
+                        '10-08' => ['Paseo de Verano', 'event'],
+                        '31-10' => ['Concurso de Halloween (aun no confirmado)', 'event'],
+                        '12-12' => ['Posada (aun no confirmado)', 'event'],
                     ];
                     $months = [
                         'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 

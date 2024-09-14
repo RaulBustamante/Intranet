@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,26 @@ Route::get('/aboutus', function () { return view('aboutus');});
 Route::get('/gallery', function () { return view('gallery');});
 Route::get('/humanResources', function () { return view('humanResources');});
 Route::get('/birthdays', function () { return view('birthdays');});
+
+use App\Http\Controllers\ReservationController;
+
+Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
+Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
+Route::get('/reservationsummary', [ReservationController::class, 'summary'])->name('reservations.summary');
+
+Route::get('/db-check', function () {
+    try {
+        DB::connection()->getPdo();
+        return 'Conexión a la base de datos exitosa';
+    } catch (\Exception $e) {
+        return 'No se pudo conectar a la base de datos. Error: ' . $e->getMessage();
+    }
+});
+
+Route::get('/video', function (Illuminate\Http\Request $request) {
+    $videoTitle = $request->input('title');
+    $videoPath = $request->input('path');
+    return view('video', ['videoTitle' => $videoTitle, 'videoPath' => $videoPath]);
+})->name('video');
+
+

@@ -50,6 +50,7 @@
     <script src="{{ asset('js/intranet.js') }}" defer></script>
 </body>
 </html>
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -216,15 +217,17 @@ footer {
     padding: 1rem 0;
 }
 </style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Galería de Eventos page loaded');
 
     const events = [
-        { title: 'Evento de Verano 2023', description: 'Revive los mejores momentos del evento de verano.', link: 'path_to_document/evento_verano_2023.pdf' },
-        { title: 'Fiesta de Navidad 2022', description: 'Recuerdos de nuestra fiesta de Navidad del año pasado.', link: 'path_to_document/fiesta_navidad_2022.pdf' },
-        { title: 'Semana de la Salud 2022', description: 'Momentos destacados de la Semana de la Salud.', link: 'path_to_document/semana_salud_2022.pdf' },
-        // Agregar más eventos según sea necesario
+        { title: 'Ariel Olympics 2024', description: 'Revive los momentos más emocionantes de nuestras Olimpiadas de la Compañía 2024, donde el espíritu de equipo, la diversión y la competencia se unieron para crear recuerdos inolvidables.', link: "{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/2024+Ariel\'s+Olympics.mp4']) }}", type: 'video' },
+        { title: 'Summer Fun Day 2024', description: 'Revive los mejores momentos del evento de verano 2024, un día lleno de sol, música y buena compañía que nos dejó recuerdos para toda la vida.', link: "{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/20240818+Summer+Fun+Day.mp4']) }}", type: 'video' },
+        { title: 'Evento de Verano 2023', description: 'Revive los mejores momentos del evento de verano.', link: 'path_to_document/evento_verano_2023.pdf', type: 'document' },
+        { title: 'Fiesta de Navidad 2022', description: 'Recuerdos de nuestra fiesta de Navidad del año pasado.', link: 'path_to_document/fiesta_navidad_2022.pdf', type: 'document' },
+        { title: 'Semana de la Salud 2022', description: 'Momentos destacados de la Semana de la Salud.', link: 'path_to_document/semana_salud_2022.pdf', type: 'document' },
     ];
 
     const eventsPerPage = 6;
@@ -244,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
             eventItem.innerHTML = `
                 <h3>${event.title}</h3>
                 <p>${event.description}</p>
-                <a href="${event.link}" target="_blank" class="button">Ver PDF</a>
+                <a href="${event.link}" target="_blank" class="button">Ver ${event.type === 'video' ? 'Video' : 'Documento'}</a>
             `;
             eventList.appendChild(eventItem);
         });
@@ -283,6 +286,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setupPagination();
     updatePagination();
 });
-
-
 </script>
