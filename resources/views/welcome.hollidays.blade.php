@@ -35,7 +35,7 @@
             </div>
             <div class="video">
                 <video controls controlsList="nodownload">
-                    <source src="https://d11dzzmlbj38ir.cloudfront.net/intro.mp4" type="video/mp4">
+                    <source src="{{ asset('videos/intro.mp4') }}" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
                 <p>Video del aniversario</p>
@@ -71,7 +71,6 @@
             <a href="/enlaces"><div class="icon">Enlaces</div></a>
             <a href="/iso"><div class="icon">ISO</div></a>
             <a href="/reservationsummary"><div class="icon">Salas de juntas</div></a>
-            <a href="/upload-video"><div class="icon">Subir contenido</div></a>
             <a href="/aboutus"><div class="icon">Sobre Ariel</div></a>
         </section>
     </main>

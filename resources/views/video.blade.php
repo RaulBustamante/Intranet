@@ -22,7 +22,7 @@
         <section class="video">
             <h2>{{ $videoTitle }}</h2>
             <video controls controlsList="nodownload" width="100%" height="auto">
-                <source src="{{ asset($videoPath) }}" type="video/mp4">
+                <source src="{{ $videoPath }}" type="video/mp4">
                 Tu navegador no soporta la etiqueta de video.
             </video>
         </section>
