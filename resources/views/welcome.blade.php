@@ -45,11 +45,10 @@
                 <ul>
                     <li><a href="{{ asset('documents/news1.pdf') }}" target="_blank">Croqueton 2024</a></li>
                     <li>
-                        <a href="{{ route('video', ['title' => 'Ariel Olympics 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/uploads/galerias/2024+Ariel\'s+Olympics.mp4']) }}" target="_blank">Ariel Olympics 2024</a>
-                    </li>
+                    <li><a href="{{ asset('documents/news2.pdf') }}" target="_blank">Noche Mexicana 2024</a></li>
                     <li>
-                        <a href="{{ route('video', ['title' => 'Summer Fun Day 2024', 'path' => 'https://d11dzzmlbj38ir.cloudfront.net/uploads/galerias/20240818+Summer+Fun+Day.mp4']) }}" target="_blank">Summer Fun Day 2024</a>
-                    </li>
+                    <li><a href="{{ asset('documents/news3.pdf') }}" target="_blank">Dia de la independencia Mexicana 2024</a></li>
+                    <li>
                 </ul>
             </div>
         </section>
@@ -63,7 +62,7 @@
             <a href="/document"><div class="icon">Documentos</div></a>
             <a href="/gallery"><div class="icon">Galería de Eventos</div></a>
             <a href="https://masorden.com/" target="_blank">
-                <div class="icon">Más Orden</div>
+                <div class="icon">+ Orden</div>
             </a>
             <a href="/boletines"><div class="icon">Boletines Mensuales</div></a>
             <a href="/birthdays"><div class="icon">Cumpleaños</div></a>

@@ -6,6 +6,31 @@
     <title>Calendario de Eventos</title>
     <link rel="stylesheet" href="{{ asset('css/intranet.css') }}">
     <script src="{{ asset('js/intranet.js') }}" defer></script>
+    <script>
+        function changeDayHeaders() {
+            // Detectar el idioma del documento
+            const lang = document.documentElement.lang;
+
+            const headersES = ['D', 'L', 'M', 'Mi', 'J', 'V', 'S'];
+            const headersEN = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+            const dayHeaders = document.querySelectorAll('.day-headers th');
+
+            if (lang === 'es') {
+                dayHeaders.forEach((th, index) => {
+                    th.textContent = headersES[index];
+                });
+            } else if (lang === 'en') {
+                dayHeaders.forEach((th, index) => {
+                    th.textContent = headersEN[index];
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            changeDayHeaders();  // Llamar a la función cuando la página cargue
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -26,7 +51,7 @@
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
-            <li><a href="https://masorden.com/">Más Orden</a></li>
+            <li><a href="https://masorden.com/">+ Orden</a></li>
             <li><a href="/boletines">Boletines Mensuales</a></li>
             <li><a href="/birthdays">Cumpleaños</a></li>
             <li><a href="/directory">Directorio</a></li>
@@ -116,7 +141,7 @@
                                                 $holidayClass = isset($holidays[$dateKey]) ? $holidays[$dateKey][1] : '';
                                                 $eventClass = isset($events[$dateKey]) ? 'event' : '';
                                             @endphp
-                                            <td class="{{ $todayClass }} {{ $holidayClass }} {{ $eventClass }}">
+                                            <td class="{{ $todayClass }} {{ $holidayClass }} {{ $eventClass }}" translate="no">
                                                 {{ $day ?: '' }}
                                             </td>
                                         @endforeach
@@ -150,7 +175,7 @@
                     <p><span class="legend-mx"></span> Festivos MX</p>
                     <p><span class="legend-both"></span> Festivos USA y MX</p>
                     <p><span class="legend-event"></span> Eventos de la Compañía</p>
-                    <p><span class="legend-today"></span> Día Actual</p> <!-- Añadir explicación para el color del día actual -->
+                    <p><span class="legend-today"></span> Hoy</p> <!-- Añadir explicación para el color del día actual -->
                 </div>
             </div>
         </section>
