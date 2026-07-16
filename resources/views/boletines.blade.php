@@ -180,7 +180,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1" target="_blank">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php" target="_blank">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>

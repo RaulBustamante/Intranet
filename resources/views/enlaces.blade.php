@@ -21,7 +21,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>
@@ -73,7 +73,25 @@
                 <p>Tableros de Resultados en tiempo real de Ariel.</p>
             </div>
         </a>
-        <a href="http://191.168.0.65/index.php/Main_Page" target="_blank" class="quick-link-card">
+	     <a href="https://helpme.arielapps.net/scp" target="_blank" class="quick-link-card">
+            <div class="quick-link-icon">
+                <img src="{{ asset('img/company-logo.png') }}" alt="ArielHelpme">
+            </div>
+            <div class="quick-link-text">
+                <h3>Ariel Helpdesk Login</h3>
+                <p>Aplicacion de Ariel de Soporte Tecnico.</p>
+            </div>
+        </a>
+        <a href="http://191.168.8.201/shelves" target="_blank" class="quick-link-card">
+            <div class="quick-link-icon">
+                <img src="{{ asset('img/company-logo.png') }}" alt="ArielKnowledge">
+            </div>
+            <div class="quick-link-text">
+                <h3>Ariel Knowledge</h3>
+                <p>Aplicacion de Ariel de Conocimiento General.</p>
+            </div>
+        </a>
+	 <a href="http://191.168.0.65/index.php/Main_Page" target="_blank" class="quick-link-card">
             <div class="quick-link-icon">
                 <img src="{{ asset('img/company-logo.png') }}" alt="ArielWiki">
             </div>
@@ -222,7 +240,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>

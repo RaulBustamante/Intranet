@@ -131,7 +131,7 @@
         </form>
 
         <div class="footer">
-            <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+            <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
         </div>
     </div>
 </body>

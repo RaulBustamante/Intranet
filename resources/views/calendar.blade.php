@@ -47,7 +47,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php">Soporte Técnico</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
@@ -64,14 +64,14 @@
     <main>
         <section class="calendar">
             <div class="calendar-header">
-                <h2>Calendario de Eventos 2024</h2>
+                <h2>Calendario de Eventos {{ date('Y') }}</h2>
             </div>
             <div class="calendar-content">
                 @php
                     $holidays = [
                         '01-01' => ['Año Nuevo (USA, MX)', 'both'],
                         '05-02' => ['Día de la Constitución (MX)', 'mx'],
-                        '18-03' => ['Natalicio de Benito Juarez (MX)', 'mx'],
+                        '17-03' => ['Natalicio de Benito Juarez (MX)', 'mx'],
                         '01-05' => ['Día del trabajo (MX)', 'mx'],
                         '27-05' => ['Memorial Day (USA)', 'usa'],
                         '04-07' => ['Independence Day (USA)', 'usa'],
@@ -79,8 +79,8 @@
                         '16-09' => ['Día de la Independencia (MX)', 'mx'],
                         '01-10' => ['Día de la Transmisión del Poder Ejecutivo Federal (MX)', 'mx'],
                         '11-11' => ['Veterans Day (USA)', 'usa'],
+                        '27-11' => ['Thanksgiving Day (USA)', 'usa'],
                         '28-11' => ['Thanksgiving Day (USA)', 'usa'],
-                        '29-11' => ['Thanksgiving Day (USA)', 'usa'],
                         '20-11' => ['Día de la Revolución Mexicana (MX)', 'mx'],
                         '25-12' => ['Navidad (USA, MX)', 'both']
                         
@@ -90,7 +90,7 @@
                         '10-05' => ['Dia de las madres', 'event'],
                         '23-06' => ['Dia del padre', 'event'],
                         '10-08' => ['Paseo de Verano', 'event'],
-                        '31-10' => ['Concurso de Halloween (aun no confirmado)', 'event'],
+                        '31-10' => ['Concurso de Halloween', 'event'],
                         '12-12' => ['Posada (aun no confirmado)', 'event'],
                     ];
                     $months = [
@@ -115,32 +115,35 @@
                             </thead>
                             <tbody>
                                 @php
-                                    $date = DateTime::createFromFormat('Y-m-d', '2024-' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-01');
+                                    $currentYear = date('Y'); // Obtiene el año actual de manera dinámica
+                                    $date = DateTime::createFromFormat('Y-m-d', $currentYear . '-' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-01');
                                     $firstDayOfMonth = $date->format('N') % 7; // Ajuste para que el lunes sea el primer día de la semana
-                                    $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, 2024);
+                                    $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $month, $currentYear);
                                     $weeks = [];
                                     $week = array_fill(0, 7, '');
                                     for ($day = 1, $cell = $firstDayOfMonth; $day <= $daysInMonth; $day++, $cell++) {
-                                        if ($cell == 7) {
-                                            $weeks[] = $week;
-                                            $week = array_fill(0, 7, '');
-                                            $cell = 0;
-                                        }
-                                        $week[$cell] = $day;
+                                    if ($cell == 7) {
+                                    $weeks[] = $week;
+                                    $week = array_fill(0, 7, '');
+                                    $cell = 0;
+                                    }
+                                    $week[$cell] = $day;
                                     }
                                     $weeks[] = $week;
                                 @endphp
                                 @foreach ($weeks as $week)
                                     <tr>
                                         @foreach ($week as $day)
-                                            @php
-                                                $dayStr = str_pad($day, 2, '0', STR_PAD_LEFT);
-                                                $monthStr = str_pad($month, 2, '0', STR_PAD_LEFT);
-                                                $dateKey = "{$dayStr}-{$monthStr}";
-                                                $todayClass = $day && $date->setDate(2024, $month, $day)->format('Y-m-d') == date('Y-m-d') ? 'today' : '';
-                                                $holidayClass = isset($holidays[$dateKey]) ? $holidays[$dateKey][1] : '';
-                                                $eventClass = isset($events[$dateKey]) ? 'event' : '';
-                                            @endphp
+                                        @php
+                                        $dayStr = str_pad($day, 2, '0', STR_PAD_LEFT);
+                                        $monthStr = str_pad($month, 2, '0', STR_PAD_LEFT);
+                                        $dateKey = "{$dayStr}-{$monthStr}";
+                                        // Cambiar 2025 por el año actual dinámico
+                                        $currentYear = date('Y');
+                                        $todayClass = $day && $date->setDate($currentYear, $month, $day)->format('Y-m-d') == date('Y-m-d') ? 'today' : '';
+                                        $holidayClass = isset($holidays[$dateKey]) ? $holidays[$dateKey][1] : '';
+                                        $eventClass = isset($events[$dateKey]) ? 'event' : '';
+                                    @endphp
                                             <td class="{{ $todayClass }} {{ $holidayClass }} {{ $eventClass }}" translate="no">
                                                 {{ $day ?: '' }}
                                             </td>
@@ -182,7 +185,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>
@@ -409,13 +412,14 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Calendar page loaded');
 
     const today = new Date().toISOString().split('T')[0];
+    const currentYear = new Date().getFullYear(); // Obtener el año actual dinámicamente
+
     document.querySelectorAll('.calendar-table td').forEach(td => {
         if (td.textContent.trim()) {
             const monthName = td.closest('.month').querySelector('h3').textContent.trim();
-            const year = 2024; // Puedes cambiar esto dinámicamente si es necesario
             const day = td.textContent.trim().padStart(2, '0');
-            const monthNumber = new Date(Date.parse(monthName + " 1, 2024")).getMonth() + 1;
-            const dateStr = `${year}-${String(monthNumber).padStart(2, '0')}-${day}`;
+            const monthNumber = new Date(Date.parse(`${monthName} 1, ${currentYear}`)).getMonth() + 1; // Usar el año actual
+            const dateStr = `${currentYear}-${String(monthNumber).padStart(2, '0')}-${day}`;
             if (dateStr === today) {
                 td.classList.add('today');
             }

@@ -22,7 +22,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/document">Documentos</a></li>
@@ -41,32 +41,135 @@
             <!-- Enero -->
             <div class="month" onclick="toggleList('january')">Enero</div>
             <ul id="january" class="birthday-list">
-                <li>Juan Perez - Enero 5</li>
-                <li>Maria Lopez - Enero 18</li>
+               <li>Samuel Vazquez - Enero 3</li>
+                <li>Alan Rodriguez - Enero 3</li>
+                <li>Patricia Amador - Enero 6</li>
+                <li>Karen Villa - Enero 6</li>
+                <li>Sandra Reynoso - Enero 7</li>
+                <li>Jesus Maravilla - Enero 9</li>
+                <li>Brandon Delgado - Enero 9</li>
+                <li>Omar Monreal - Enero 13</li>
+                <li>Kevin Cervantes - Enero 13</li>
+                <li>Adolfo Dominguez - Enero 17</li>
+                <li>Mario Velarde - Enero 19</li>
+                <li>Sujey Colin - Enero 21</li>
+                <li>Rosa Hernández - Enero 22</li>
+                <li>Alfredo Inzunza - Enero 23</li>
+                <li>Yesenia Ventura - Enero 23</li>
+                <li>Brenda Melchor - Enero 23</li>
+                <li>Elvira Nuño - Enero 25</li>
+                <li>Vanessa Garcia - Enero 30</li>
+                <li>Said Medina - Enero 30</li>
+                <li>Claudia Rivas - Enero 31</li>
+                <li>Jesús Rodriguez - Enero 31</li>
             </ul>
 
             <!-- Febrero -->
             <div class="month" onclick="toggleList('february')">Febrero</div>
             <ul id="february" class="birthday-list">
-                <li>Carlos Jimenez - Febrero 10</li>
+                <li>Ana Sandoval - Febrero 2</li>
+                <li>Cesar Pizaña - Febrero 2</li>
+                <li>Diana De la Cerda - Febrero 3</li>
+                <li>Alfredo Ramirez - Febrero 4</li>
+                <li>Josué Argote - Febrero 4</li>
+                <li>Concepción Castillo - Febrero 5</li>
+                <li>José Tavera - Febrero 5</li>
+                <li>Fernanda Osuna - Febrero 5</li>
+                <li>Luz Hernández - Febrero 7</li>
+                <li>Vannesa Martinez - Febrero 14</li>
+                <li>Juan Almanza - Febrero 17</li>
+                <li>Simona Solis - Febrero 18</li>
+                <li>Guadalupe Herrera - Febrero 20</li>
+                <li>Johan Mendes - Febrero 20</li>
+                <li>Grisly López - Febrero 21</li>
+                <li>Blanca Reynoso - Febrero 24</li>
+                <li>Jennifer Sil - Febrero 26</li>
+                <li>Ricardo Moran - Febrero 26</li>
+                <li>Patricia Martinez - Febrero 27</li>
             </ul>
 
             <!-- Marzo -->
             <div class="month" onclick="toggleList('march')">Marzo</div>
-            <ul id="march" class="birthday-list">
-                <li>Pedro Martinez - Marzo 12</li>
-            </ul>
+    <ul id="march" class="birthday-list">
+        <li>Tomas Camacho - Marzo 2 (Almacén)</li>
+        <li>Lilia Ibarra - Marzo 2 (Producción)</li>
+        <li>Raul Bustamante - Marzo 4 (Administración)</li>
+        <li>Leticia López - Marzo 5 (Producción)</li>
+        <li>Humberto Mares - Marzo 6 (Producción)</li>
+        <li>Jorge Miranda - Marzo 6 (Producción)</li>
+        <li>Daniel Guzmán - Marzo 7 (Diseño)</li>
+        <li>Karely Valdez - Marzo 8 (Producción)</li>
+        <li>Jorge Cuellar - Marzo 9 (Almacén)</li>
+        <li>Jesus Soto - Marzo 11 (Producción)</li>
+        <li>Alma Cardenas - Marzo 15 (Producción)</li>
+        <li>Alfonso Orozco - Marzo 16 (Producción Murua 21)</li>
+        <li>Joanna Pacheco - Marzo 17 (Producción)</li>
+        <li>José Luis Martinez - Marzo 17 (Diseño)</li>
+        <li>Zayanna Silvestre - Marzo 18 (Calidad)</li>
+        <li>José Luis Hidrogo - Marzo 19 (Envíos)</li>
+        <li>Luteria González - Marzo 21 (Intendencia)</li>
+        <li>Brenda Casas - Marzo 21 (Producción)</li>
+        <li>Stephany Ramirez - Marzo 23 (DS)</li>
+        <li>Ma. De la Luz Quiñonez - Marzo 24 (Producción Murua 21)</li>
+        <li>Olandina González - Marzo 24 (Producción Murua 21)</li>
+        <li>Norberto Alvarado - Marzo 26 (Producción)</li>
+        <li>Rolando López - Marzo 26 (Producción)</li>
+        <li>Alfredo Morales - Marzo 27 (RH)</li>
+        <li>Sebastian Cruz - Marzo 27 (Almacén)</li>
+        <li>Luis Alvarado - Marzo 30</li>
+    </ul>
 
             <!-- Abril -->
             <div class="month" onclick="toggleList('april')">Abril</div>
             <ul id="april" class="birthday-list">
-                <li>Ana Torres - Abril 22</li>
+                <li>Ricardo Vazquez - Abril 3 (Producción)</li>
+                <li>Luis Cames - Abril 5 (Producción)</li>
+                <li>Raquel Garza - Abril 8 (Producción)</li>
+                <li>Evelyne Chacón - Abril 8 (Producción)</li>
+                <li>Monica Gamboa - Abril 9 (Producción)</li>
+                <li>Santiago Lizárraga - Abril 9 (Almacén Nocturno)</li>
+                <li>Isaac Sevilla - Abril 10 (Almacén)</li>
+                <li>Reina Burrola - Abril 12 (Arte)</li>
+                <li>Evelin Quezada - Abril 13 (Compras)</li>
+                <li>Yesenia Fonseca - Abril 15 (Producción)</li>
+                <li>Melisa Velazquez - Abril 15 (Producción)</li>
+                <li>Priscilla Castillo - Abril 17 (Marketing)</li>
+                <li>Magaly Fierro - Abril 18 (Producción)</li>
+                <li>Roberto Gutierrez - Abril 20 (DS)</li>
+                <li>Judith Zavala - Abril 22 (Contabilidad)</li>
+                <li>Itzuri Garniça - Abril 24 (Producción Murua 21)</li>
+                <li>Marcos Perez - Abril 25 (Producción)</li>
+                <li>Mayra Ambriz - Abril 25 (DS)</li>
+                <li>Elizabeth Loera - Abril 28 (Producción)</li>
             </ul>
 
             <!-- Mayo -->
             <div class="month" onclick="toggleList('may')">Mayo</div>
             <ul id="may" class="birthday-list">
-                <li>Sofia Gomez - Mayo 5</li>
+                <li>Maria Cruz González - Mayo 3</li>
+                <li>Adriana Isaias - Mayo 4</li>
+                <li>Mariana Baños - Mayo 5</li>
+                <li>Karina Hernández - Mayo 7</li>
+                <li>Luis Antonio Morales - Mayo 7</li>
+                <li>Alejandro Zamudio - Mayo 8</li>
+                <li>Veronica Cortez - Mayo 8</li>
+                <li>Irma Benitez - Mayo 9</li>
+                <li>Cristo Galván - Mayo 10</li>
+                <li>Alejandrina Zamora - Mayo 11</li>
+                <li>Kevin Sotelo - Mayo 11</li>
+                <li>Daniel Palomares - Mayo 13</li>
+                <li>Ana Paola Ramirez - Mayo 15</li>
+                <li>Ricardo Ubaldo - Mayo 21</li>
+                <li>Susan Molina - Mayo 22</li>
+                <li>Erick Hernández - Mayo 24</li>
+                <li>Laisa Vera - Mayo 24</li>
+                <li>Edgar Mares - Mayo 25</li>
+                <li>Juan Carlos Piña - Mayo 28</li>
+                <li>José Luis Ponce - Mayo 28</li>
+                <li>José Luis Becerra - Mayo 30</li>
+                <li>Joseline Torres - Mayo 30</li>
+                <li>Samuel Montes - Mayo 31</li>
+                <li>Esmeralda Alarcón - Mayo 31</li>
             </ul>
 
             <!-- Junio -->
@@ -146,7 +249,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>

@@ -154,7 +154,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/humanResources">Recursos Humanos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
@@ -180,7 +180,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 
     <script>

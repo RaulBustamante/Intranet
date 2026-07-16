@@ -30,12 +30,12 @@
                 <div class="suggestions">
                     <h2>Buzón de Sugerencias</h2>
                     <p>Déjanos tus comentarios y sugerencias</p>
-                    <button onclick="window.open('https://wkf.ms/4bjg8Er', '_blank')">Enviar Sugerencia</button>
+                    <button onclick="window.open('https://forms.monday.com/forms/3eefa9487ae5ddb64a51904639bf6da5?r=use1', '_blank')">Enviar Sugerencia</button>
                 </div>
             </div>
             <div class="video">
                 <video controls controlsList="nodownload">
-                    <source src="https://d11dzzmlbj38ir.cloudfront.net/intro.mp4" type="video/mp4">
+                    <source src="https://d11dzzmlbj38ir.cloudfront.net/ARIEL_ANNIVERSARYV02.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
                 <p>Video del aniversario</p>
@@ -54,7 +54,7 @@
         </section>
 
         <section class="quick-links">
-            <a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1" target="_blank">
+            <a href="https://helpme.arielapps.net/open.php" target="_blank">
                 <div class="icon">Soporte Técnico</div>
             </a>
             <a href="/calendar"><div class="icon">Calendario y Eventos</div></a>
@@ -71,12 +71,18 @@
             <a href="/iso"><div class="icon">ISO</div></a>
             <a href="/reservationsummary"><div class="icon">Salas de juntas</div></a>
             <a href="/upload-video"><div class="icon">Subir contenido</div></a>
-            <a href="/aboutus"><div class="icon">Sobre Ariel</div></a>
+            <a href="https://wkf.ms/4lkF9W3" target="_blank">
+	    	<div class="icon">Requisicion de Compra</div>
+            </a>
+	    <a href="https://wkf.ms/4nhl2Jt" target="_blank">
+                <div class="icon">Solicitud de Mantenimiento</div>
+            </a> 
+	    <a href="/aboutus"><div class="icon">Sobre Ariel</div></a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 contacto de Intranet: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} contacto de Intranet: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>

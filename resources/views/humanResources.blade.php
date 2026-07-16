@@ -23,7 +23,7 @@
     <nav class="nav-bar">
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
-            <li><a href="https://forms.monday.com/forms/39c0137f606d1a26271cbe8e9372ada0?r=use1">Soporte Técnico</a></li>
+            <li><a href="https://helpme.arielapps.net/open.php">Soporte Técnico</a></li>
             <li><a href="/calendar">Calendario y Eventos</a></li>
             <li><a href="/document">Documentos</a></li>
             <li><a href="/gallery">Galería de Eventos</a></li>
@@ -66,6 +66,26 @@
             </div>
         </section>
 
+        <section id="reclutamiento">
+            <div class="section-header">
+                <h2>Reclutamiento</h2>
+            </div>
+            <div class="section-content">
+                <p>Accede a recursos para la contratación y referidos de nuevos empleados.</p>
+                <ul>
+                    <li><a href="{{ url('/rh/cursos-en-linea') }}">Vacantes disponibles</a></li>
+                    <li><a href="{{ url('/rh/talleres-presenciales') }}">Programa de Referidos</a></li>
+                </ul>
+                
+                <div style="margin-top: 1.5rem;">
+                    <strong>Requisición de Personal</strong><br>
+                    <p>Si necesitas solicitar una nueva vacante o hacer una requisición de personal, llena el formulario en el siguiente enlace:</p>
+                    <a href="https://wkf.ms/4gQX9nv" target="_blank" class="button-link">Solicitar Vacante</a>
+                </div>
+            </div>
+        </section>
+        
+
         <section id="bienestar">
             <div class="section-header">
                 <h2>Bienestar del Empleado</h2>
@@ -94,7 +114,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
+        <p>&copy; {{ date('Y') }} Intranet contact: <a href="mailto:raulb@arielpremium.com">raulb@arielpremium.com</a></p>
     </footer>
 </body>
 </html>
@@ -234,6 +254,27 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+.button-link {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff !important; /* Fuerza el color blanco */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #c0392b;
+}
+
+/* Espaciado entre "Requisición de Personal" y los enlaces superiores */
+.section-content ul li:last-child {
+    margin-top: 1rem;
+}
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
