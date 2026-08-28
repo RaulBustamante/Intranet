@@ -192,6 +192,7 @@
     <main class="container">
         <section class="documents-section">
             <h2>Lista de documentos</h2>
+            @includeWhen(isset($error), 'partials.s3-error', ['error' => $error ?? null])
             <div class="documents-list">
                 <ul>
                     @foreach ($files as $file)

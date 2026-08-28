@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Aws\S3\S3Client;
 
 class VideoController extends Controller
@@ -124,7 +125,7 @@ class VideoController extends Controller
             ]);
 
             $files = [];
-            foreach ($results['Contents'] as $object) {
+            foreach ($results['Contents'] ?? [] as $object) {
                 $fileName = pathinfo($object['Key'], PATHINFO_BASENAME);
                 $fileExtension = pathinfo($object['Key'], PATHINFO_EXTENSION);
 
@@ -141,7 +142,19 @@ class VideoController extends Controller
 
             return view($viewName, ['files' => $files]);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error al obtener los archivos: ' . $e->getMessage());
+            // Antes esto hacia redirect()->back(), lo que dejaba la pagina en
+            // blanco o rebotando al inicio sin decir nada: el modulo "dejaba de
+            // funcionar" sin rastro. Ahora el fallo queda en el log y la vista
+            // se renderiza igual, con el aviso visible.
+            Log::error('S3 listObjectsV2 fallo para el prefijo ' . $folderPath, [
+                'bucket' => env('AWS_BUCKET'),
+                'error' => $e->getMessage(),
+            ]);
+
+            return view($viewName, [
+                'files' => [],
+                'error' => 'No se pudieron cargar los archivos desde S3: ' . $e->getMessage(),
+            ]);
         }
     }
 

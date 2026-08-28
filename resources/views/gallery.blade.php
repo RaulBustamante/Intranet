@@ -188,6 +188,7 @@
     <main>
         <section class="gallery">
             <h2>Eventos Recientes</h2>
+            @includeWhen(isset($error), 'partials.s3-error', ['error' => $error ?? null])
             <div id="event-list">
                 <ul>
                     @foreach ($files as $file)

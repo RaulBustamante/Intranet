@@ -1,6 +1,22 @@
 #!/usr/bin/env php
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Compatibilidad de version de PHP
+|--------------------------------------------------------------------------
+|
+| Este proyecto corre sobre Laravel 8.83, que fue escrito antes de PHP 8.4.
+| PHP 8.4 deprecó los parámetros nullable implícitos (function f(int $a = null)
+| ahora exige ?int), asi que el framework y todo vendor/ disparan cientos de
+| avisos "Deprecated" al arrancar, antes de que Laravel registre su propio
+| manejador de errores. Silenciarlos aqui, antes del autoloader, los apaga
+| para siempre en cualquier version de PHP. Ver tambien public/index.php.
+|
+*/
+
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -16,6 +32,20 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/vendor/autoload.php';
+
+/*
+| Precargar el stack de logging mientras E_DEPRECATED sigue apagado.
+|
+| Laravel instala su propio manejador de errores y, cuando le llega la primera
+| deprecacion, resuelve LogManager para registrarla. Eso autocarga Monolog\Logger
+| e Illuminate\Log\Logger, cuyas declaraciones disparan mas deprecaciones ya
+| estando dentro del manejador. PHP no re-entra a un manejador de errores, asi
+| que esas caen al manejador nativo y se imprimen. Compilarlas aqui, antes,
+| evita por completo esa fuga.
+*/
+class_exists(\Monolog\Logger::class);
+class_exists(\Illuminate\Log\Logger::class);
+class_exists(\Illuminate\Log\LogManager::class);
 
 $app = require_once __DIR__.'/bootstrap/app.php';
 
