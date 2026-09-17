@@ -17,6 +17,28 @@ $app = new Illuminate\Foundation\Application(
 
 /*
 |--------------------------------------------------------------------------
+| Compatibilidad de version de PHP
+|--------------------------------------------------------------------------
+|
+| artisan y public/index.php apagan E_DEPRECATED antes del autoloader, pero el
+| bootstrapper HandleExceptions restaura error_reporting(-1). Todo lo que se
+| autocarga despues (Collections, Eloquent, el canal flare de Ignition) vuelve a
+| disparar avisos de PHP 8.4, y como saltan mientras Laravel ya esta dentro de su
+| manejador de errores, PHP no re-entra y los imprime el manejador nativo: en la
+| consola de "artisan serve". Reapagarlo aqui cierra esa ventana apenas se abre;
+| AppServiceProvider::register llega varios providers tarde.
+|
+*/
+
+$app->afterBootstrapping(
+    Illuminate\Foundation\Bootstrap\HandleExceptions::class,
+    function () {
+        error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+    }
+);
+
+/*
+|--------------------------------------------------------------------------
 | Bind Important Interfaces
 |--------------------------------------------------------------------------
 |
