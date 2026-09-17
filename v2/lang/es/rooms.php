@@ -1,0 +1,28 @@
+<?php
+
+return array (
+  'title' => 'Salas de juntas',
+  'subtitle' => 'Disponibilidad y reservas',
+  'my_bookings' => 'Mis reservas',
+  'available' => 'Disponible',
+  'busy' => 'Ocupada',
+  'unavailable' => 'Ese horario ya está ocupado en esta sala.',
+  'book' => 'Reservar',
+  'cancel' => 'Cancelar',
+  'capacity' => ':n personas',
+  'free_all_day' => 'Libre todo el día',
+  'no_rooms' => 'No hay salas configuradas',
+  'booked' => 'Sala reservada.',
+  'cancelled_ok' => 'Reserva cancelada.',
+  'no_employee' => 'Tu cuenta no está ligada a un empleado. Pídele a RH que la vincule para poder reservar.',
+  'bad_range' => 'La hora de fin debe ser posterior a la de inicio.',
+  'book_in' => 'Reservar :room',
+  'meeting_title' => 'Tema de la junta',
+  'from' => 'De',
+  'to' => 'a',
+  'attendees' => 'Asistentes',
+  'no_bookings' => 'No tienes reservas próximas',
+  'mail_subject' => 'Reserva confirmada: :room',
+  'mail_title' => 'Tu reserva quedó confirmada',
+  'mail_ics_hint' => 'Adjuntamos un archivo para que la agregues a tu calendario con un clic.',
+);

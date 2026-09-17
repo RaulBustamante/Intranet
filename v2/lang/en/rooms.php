@@ -1,0 +1,28 @@
+<?php
+
+return array (
+  'title' => 'Meeting rooms',
+  'subtitle' => 'Availability and bookings',
+  'my_bookings' => 'My bookings',
+  'available' => 'Available',
+  'busy' => 'Busy',
+  'unavailable' => 'That time is already taken in this room.',
+  'book' => 'Book',
+  'cancel' => 'Cancel',
+  'capacity' => ':n people',
+  'free_all_day' => 'Free all day',
+  'no_rooms' => 'No rooms configured',
+  'booked' => 'Room booked.',
+  'cancelled_ok' => 'Booking cancelled.',
+  'no_employee' => 'Your account is not linked to an employee. Ask HR to link it so you can book.',
+  'bad_range' => 'The end time must be after the start time.',
+  'book_in' => 'Book :room',
+  'meeting_title' => 'Meeting title',
+  'from' => 'From',
+  'to' => 'to',
+  'attendees' => 'Attendees',
+  'no_bookings' => 'You have no upcoming bookings',
+  'mail_subject' => 'Booking confirmed: :room',
+  'mail_title' => 'Your booking is confirmed',
+  'mail_ics_hint' => 'We attached a file so you can add it to your calendar with one click.',
+);

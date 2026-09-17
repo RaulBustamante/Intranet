@@ -1,0 +1,282 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* ==========================================================================
+   Ariel Hub — Sistema de diseño "Executive Light"
+   --------------------------------------------------------------------------
+   Regla de color no negociable (UX-03, UX-04):
+
+   El rojo de marca #ED2228 sobre blanco da ~4.0:1 de contraste. Eso NO alcanza
+   AA para texto normal. Por lo tanto:
+
+     - #ED2228 se usa SOLO como fondo, con texto blanco encima
+     - Todo texto o enlace en rojo usa --brand-text (#C91B21, ~5.3:1)
+     - En oscuro los textos rojos usan #FF6B6F, porque el rojo puro tampoco
+       alcanza sobre fondo oscuro
+
+   Si en una pantalla el rojo aparece más de tres veces, algo está mal
+   jerarquizado: la estructura la da el borde de 1px, no el color.
+   ========================================================================== */
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    /* Marca */
+    --color-brand: #ed2228;
+    --color-brand-hover: #c91b21;
+    --color-brand-text: #c91b21;
+    --color-brand-tint: #fef2f2;
+
+    /* Superficies y tinta — modo claro */
+    --color-paper: #ffffff;
+    --color-paper-2: #fafafa;
+    --color-paper-3: #f4f4f5;
+    --color-line: #e7e7e9;
+    --color-ink-900: #0f1012;
+    --color-ink-700: #3a3d42;
+    --color-ink-500: #6b6f76;
+
+    /* Estados */
+    --color-ok: #0f7b3f;
+    --color-warn: #a96400;
+    --color-danger: #c0292f;
+
+    /* Radios */
+    --radius-card: 0.625rem;
+}
+
+/* Variables vivas: son las que consumen los componentes.
+   Se redefinen en oscuro sin tocar una sola clase de utilidad. */
+:root {
+    --paper: #ffffff;
+    --paper-2: #fafafa;
+    --paper-3: #f4f4f5;
+    --line: #e7e7e9;
+    --ink-900: #0f1012;
+    --ink-700: #3a3d42;
+    --ink-500: #6b6f76;
+    --brand: #ed2228;
+    --brand-hover: #c91b21;
+    --brand-text: #c91b21;
+    --brand-tint: #fef2f2;
+    --ok: #0f7b3f;
+    --warn: #a96400;
+    --danger: #c0292f;
+    --ring: #ed2228;
+    color-scheme: light;
+}
+
+.dark {
+    --paper: #0f1012;
+    --paper-2: #17181b;
+    --paper-3: #1f2024;
+    --line: #26282c;
+    --ink-900: #f5f5f6;
+    --ink-700: #c9cacd;
+    --ink-500: #8e9298;
+    --brand: #ed2228;
+    --brand-hover: #ff3a40;
+    --brand-text: #ff6b6f;      /* el rojo puro no alcanza AA sobre oscuro */
+    --brand-tint: #2a1416;
+    --ok: #34c77b;
+    --warn: #f0a93c;
+    --danger: #ff6b6f;
+    --ring: #ff6b6f;
+    color-scheme: dark;
+}
+
+@layer base {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        background-color: var(--paper-2);
+        color: var(--ink-700);
+        font-family: var(--font-sans);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+        color: var(--ink-900);
+        letter-spacing: -0.02em;   /* lo que hace que se vea de producto */
+        line-height: 1.15;
+        font-weight: 600;
+    }
+
+    /* Foco siempre visible (UX-09). Nunca quitar el outline sin reemplazarlo. */
+    :focus-visible {
+        outline: 2px solid var(--ring);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+    ::selection {
+        background: var(--brand);
+        color: #fff;
+    }
+
+    /* Respeta a quien pidió menos movimiento */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer components {
+    /* ---- Superficies ---------------------------------------------------- */
+    .ah-card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-card);
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .ah-card-hover:hover {
+        border-color: var(--brand);
+        box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+    }
+
+    /* ---- Botones -------------------------------------------------------- */
+    .ah-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.875rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        cursor: pointer;
+        transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        white-space: nowrap;
+    }
+
+    /* Rojo como FONDO con texto blanco: aquí sí pasa AA */
+    .ah-btn-primary {
+        background: var(--brand);
+        color: #fff;
+        border: 1px solid transparent;
+    }
+    .ah-btn-primary:hover { background: var(--brand-hover); }
+
+    .ah-btn-secondary {
+        background: var(--paper);
+        color: var(--ink-900);
+        border: 1px solid var(--line);
+    }
+    .ah-btn-secondary:hover { border-color: var(--ink-500); }
+
+    .ah-btn-ghost {
+        background: transparent;
+        color: var(--ink-700);
+        border: 1px solid transparent;
+    }
+    .ah-btn-ghost:hover { background: var(--paper-3); color: var(--ink-900); }
+
+    /* ---- Insignias ------------------------------------------------------ */
+    .ah-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        border-radius: 999px;
+        padding: 0.125rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        border: 1px solid var(--line);
+        color: var(--ink-700);
+        background: var(--paper-2);
+    }
+    .ah-badge-brand  { background: var(--brand-tint); color: var(--brand-text); border-color: transparent; }
+    .ah-badge-ok     { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 30%, transparent); background: color-mix(in srgb, var(--ok) 8%, transparent); }
+    .ah-badge-warn   { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 30%, transparent); background: color-mix(in srgb, var(--warn) 8%, transparent); }
+    .ah-badge-danger { color: var(--danger); border-color: color-mix(in srgb, var(--danger) 30%, transparent); background: color-mix(in srgb, var(--danger) 8%, transparent); }
+
+    /* ---- Enlaces -------------------------------------------------------- */
+    .ah-link {
+        color: var(--brand-text);   /* NUNCA var(--brand): no pasa AA como texto */
+        text-decoration: none;
+    }
+    .ah-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ---- Campos --------------------------------------------------------- */
+    .ah-input {
+        width: 100%;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        color: var(--ink-900);
+        transition: border-color 0.15s ease;
+    }
+    .ah-input::placeholder { color: var(--ink-500); }
+    .ah-input:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 12%, transparent); }
+
+    /* ---- Navegación ----------------------------------------------------- */
+    .ah-nav-link {
+        position: relative;
+        padding: 0.375rem 0.125rem;
+        font-size: 0.875rem;
+        color: var(--ink-500);
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+    .ah-nav-link:hover { color: var(--ink-900); }
+    .ah-nav-link[aria-current="page"] { color: var(--ink-900); font-weight: 500; }
+    .ah-nav-link[aria-current="page"]::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -0.8125rem;
+        height: 2px;
+        background: var(--brand);   /* el único acento de la barra */
+    }
+
+    /* ---- Tabla ---------------------------------------------------------- */
+    .ah-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    .ah-table thead th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--ink-500);
+        padding: 0.625rem 0.75rem;
+        border-bottom: 1px solid var(--line);
+        white-space: nowrap;
+    }
+    .ah-table tbody td { padding: 0.75rem; border-bottom: 1px solid var(--line); }
+    .ah-table tbody tr:last-child td { border-bottom: 0; }
+    .ah-table tbody tr:hover { background: var(--paper-2); }
+
+    /* ---- Separador con título ------------------------------------------- */
+    .ah-eyebrow {
+        font-size: 0.6875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-500);
+    }
+
+    /* Cualquier cosa que se desborde (tablas, diagramas) hace scroll dentro
+       de su contenedor, nunca la página (UX-08). */
+    .ah-scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@layer utilities {
+    .bg-paper    { background-color: var(--paper); }
+    .bg-paper-2  { background-color: var(--paper-2); }
+    .bg-paper-3  { background-color: var(--paper-3); }
+    .text-ink    { color: var(--ink-900); }
+    .text-ink-70 { color: var(--ink-700); }
+    .text-ink-50 { color: var(--ink-500); }
+    .border-line { border-color: var(--line); }
+    .text-brand  { color: var(--brand-text); }
+}
